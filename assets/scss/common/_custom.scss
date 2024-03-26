@@ -1,1 +1,10 @@
 // Put your custom SCSS code here
+.my-hero {
+  h1.title {
+    display: inline-flex !important;
+    padding-inline-end: 5%;
+  }
+  h3.lead {
+    display: inline-flex !important;
+  }
+}
