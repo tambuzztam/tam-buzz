@@ -1,1 +1,37 @@
-// Put your custom SCSS code here
+// Put your custom SCSS code here  {
+.message {
+  opacity: .2;
+  h1.invitation {
+    @include keyframes(fadeIn) {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @include animate(fadeIn, 2s, ease-in, 1); 
+    display: inline-flex !important;
+    padding-inline-end: 2%;
+
+  }
+
+    
+
+
+  h1.subject {
+    display: inline-flex !important;
+    color: firebrick;
+  }
+}
+
+.tamline {
+  h1.star {
+    display: inline-flex !important;
+    padding-inline-end: 5%;
+  }
+  h1.tam {
+    display: inline-flex !important;
+    color: firebrick;
+  }
+}
