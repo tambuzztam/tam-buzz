@@ -2,8 +2,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/services/reference/example-reference/</loc>
-      <lastmod>2023-09-07T16:13:18+02:00</lastmod>
+      <loc>http://localhost:1313/sciences/lorem/ipsum/</loc>
+      <lastmod>2024-03-26T12:16:58-05:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>

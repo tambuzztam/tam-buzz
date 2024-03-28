@@ -1,15 +1,11 @@
 ---
-title: "docs"
+title: "Ipsum"
 description: ""
 summary: ""
-date: 2023-09-07T16:12:03+02:00
-lastmod: 2023-09-07T16:12:03+02:00
+date: 2024-03-26T12:16:58-05:00
+lastmod: 2024-03-26T12:16:58-05:00
 draft: false
-menu:
-  docs:
-    parent: ""
-    identifier: "docs-9602b15bad02600f3883f55e2ade6b81"
-weight: 999
+weight: 100
 toc: true
 seo:
   title: "" # custom title (optional)

@@ -1,8 +1,8 @@
-title = "Tam"
 baseurl = "/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
+title = "Tam"
 # disableKinds = ["taxonomy", "term"]
 enableEmoji = true
 enableGitInfo = false
@@ -10,12 +10,12 @@ enableRobotsTXT = true
 languageCode = "en-US"
 paginate = 10
 rssLimit = 10
-summarylength = 20 # 70 (default)
+summarylength = 20     # 70 (default)
 
 # Multilingual
 defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
+disableLanguages = ["de", "nl"]
 
 copyRight = "Copyright (c) 2024- Tam"
 
@@ -27,19 +27,19 @@ copyRight = "Copyright (c) 2024- Tam"
   section = ["HTML", "RSS", "SITEMAP"]
 
 [outputFormats.searchIndex]
-  mediaType = "application/json"
   baseName = "search-index"
   isPlainText = true
+  mediaType = "application/json"
   notAlternative = true
 
 # Add output format for section sitemap.xml
 [outputFormats.SITEMAP]
-  mediaType = "application/xml"
   baseName = "sitemap"
   isHTML = false
   isPlainText = true
+  mediaType = "application/xml"
   noUgly = true
-  rel  = "sitemap"
+  rel = "sitemap"
 
 [sitemap]
   changefreq = "monthly"
@@ -49,33 +49,34 @@ copyRight = "Copyright (c) 2024- Tam"
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"
-    maxAge = -1 # "30m"
+    maxAge = -1                # "30m"
 
 [taxonomies]
-  contributor = "contributors"
   category = "categories"
+  contributor = "contributors"
   tag = "tags"
 
 [permalinks]
   # blog = "/blog/:slug/"
-  docs = "/services/:sections[1:]/:slug/"
+  sciences = "/sciences/:sections[1:]/:slug/"
+  docs = "/docs/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
   keepWhitespace = false
 
 [related]
-  threshold = 80
   includeNewer = true
+  threshold = 80
   toLower = false
-    [[related.indices]]
-      name = "categories"
-      weight = 100
-    [[related.indices]]
-      name = "tags"
-      weight = 80
-    [[related.indices]]
-      name = "date"
-      weight = 10
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 [imaging]
   anchor = "Center"

@@ -1,10 +1,17 @@
 # Hugo
-title = "Tam"
-description = "philosophical counseling"
-images = ["cover.png"]
+description = "Philosophical Counseling. Certified by the APPA."
+
+# [titles]
+title1 = "Philosophic Conversation"
+star = "*"
+tam = "TAM"
+title3 = "Sounds of heart-speak."
+title4 = "Prize of problems."
+title5 = "Heft of wisdom."
+title6 = "Treasure of mind."
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["docs", "sciences"]
 
 [social]
   twitter = "getdoks"
@@ -12,71 +19,76 @@ mainSections = ["docs"]
 # Doks (@hyas/doks-core)
 [doks]
   # Color mode
-  colorMode = "auto" # auto (default), light or dark
-  colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
+  colorMode = "dark"      # auto (default), light or dark
+  colorModeToggler = false # true (default) or false (this setting is only relevant when colorMode = auto)
 
   # Navbar
-  navbarSticky = true # true (default) or false
   containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+  navbarSticky = true        # true (default) or false
 
   ## Button
-  navBarButton = false # false (default) or true
-  navBarButtonUrl = "/docs/prologue/introduction/"
+  navBarButton = false                             # false (default) or true
   navBarButtonText = "Get started"
+  navBarButtonUrl = "/docs/prologue/introduction/"
 
   # FlexSearch
-  flexSearch = true # true (default) or false
-  searchExclKinds = [] # list of page kinds to exclude from search indexing (e.g. ["home", "taxonomy", "term"] )
-  searchExclTypes = [] # list of content types to exclude from search indexing (e.g. ["blog", "docs", "legal", "contributors", "categories"])
-  showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
+  flexSearch = false# true (default) or false
   indexSummary = false # true or false (default); whether to index only the `.Summary` instead of the full `.Content`; limits the respective JSON field size and thus increases loading time
+  searchExclKinds = [
+  ] # list of page kinds to exclude from search indexing (e.g. ["home", "taxonomy", "term"] )
+  searchExclTypes = [
+  ] # list of content types to exclude from search indexing (e.g. ["blog", "docs", "legal", "contributors", "categories"])
+  showSearch = [
+  ] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
 
   ## Search results
-  showDate = false # false (default) or true
+  searchLimit = 99   # 0 (no limit, default) or natural number
+  showDate = false   # false (default) or true
   showSummary = true # true (default) or false
-  searchLimit = 99 # 0 (no limit, default) or natural number
 
   # Global alert
-  alert = false # false (default) or true
+  alert = false           # false (default) or true
   alertDismissable = true # true (default) or false
 
   # Bootstrap
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
-  toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
   scrollSpy = true # true (default) or false
+  sectionNav = [
+    "docs",
+  ] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  toTopButton = false # false (default) or true
 
   # Multilingual
-  multilingualMode = false # false (default) or true
-  showMissingLanguages = true # whether or not to show untranslated languages in the language menu; true (default) or false
+  multilingualMode = false     # false (default) or true
+  showMissingLanguages = false # whether or not to show untranslated languages in the language menu; true (default) or false
 
   # Versioning
-  docsVersioning = false # false (default) or true
   docsVersion = "1.0"
+  docsVersioning = false # false (default) or true
 
   # UX
-  headerBar = false # true (default) or false
-  backgroundDots = true # true (default) or false
+  backgroundDots = false # true (default) or false
+  headerBar = false     # true (default) or false
 
   # Homepage
-  sectionFooter = true # false (default) or true
+  sectionFooter = false # false (default) or true
 
   # Blog
+  imageList = true     # true (default) or false
+  imageSingle = true   # true (default) or false
   relatedPosts = false # false (default) or true
-  imageList = true # true (default) or false
-  imageSingle = true # true (default) or false
 
   # Repository
-  editPage = false # false (default) or true
-  lastMod = false # false (default) or true
-  repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
   docsRepo = "https://github.com/h-enk/doks"
-  docsRepoBranch = "main" # main (default), master, or <branch name>
-  docsRepoSubPath = "" # "" (none, default) or <sub path>
+  docsRepoBranch = "main"                    # main (default), master, or <branch name>
+  docsRepoSubPath = ""                       # "" (none, default) or <sub path>
+  editPage = false                           # false (default) or true
+  lastMod = false                            # false (default) or true
+  repoHost = "GitHub"                        # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
 
   # SCSS colors
   # backGround = "yellowgreen"
@@ -94,10 +106,10 @@ mainSections = ["docs"]
 
 # Debug
 [render_hooks.image]
-  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+  errorLevel = 'warning' # ignore (default), warning, or error (fails the build)
 
 [render_hooks.link]
-  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+  errorLevel = 'warning'   # ignore (default), warning, or error (fails the build)
   highlightBroken = false # true or false (default)
 
 # Images (@hyas/images)
@@ -106,10 +118,17 @@ mainSections = ["docs"]
     decoding = "async" # sync, async, or auto (default)
     fetchpriority = "auto" # high, low, or auto (default) 
     loading = "lazy" # eager or lazy (default)
-    widths = [480, 576, 768, 1025, 1200, 1440] # [640, 768, 1024, 1366, 1600, 1920] for example
-    sizes = "auto" # 100vw (default), 75vw, or auto for example
-    process = "" # "fill 1600x900" or "fill 2100x900" for example
     lqip = "16x webp q20" # "16x webp q20" or "21x webp q20" for example
+    process = "" # "fill 1600x900" or "fill 2100x900" for example
+    sizes = "auto" # 100vw (default), 75vw, or auto for example
+    widths = [
+      1025,
+      1200,
+      1440,
+      480,
+      576,
+      768,
+    ] # [640, 768, 1024, 1366, 1600, 1920] for example
 
 # Inline SVG (@hyas/inline-svg)
 [inline_svg]
@@ -121,18 +140,19 @@ mainSections = ["docs"]
     separator = " | "
     suffix = ""
   [seo.favicons]
-    sizes = []
-    icon = "favicon.png" # favicon.png (default)
-    svgIcon = "favicon.svg" # favicon.svg (default)
+    icon = "favicon.png"       # favicon.png (default)
     maskIcon = "mask-icon.svg" # mask-icon.svg (default)
-    maskIconColor = "white" # white (default)
+    maskIconColor = "white"    # white (default)
+    sizes = []
+    svgIcon = "favicon.svg"    # favicon.svg (default)
   [seo.schemas]
-    type = "Organization" # Organization (default) or Person
-    logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Hyas" # Name of Organization or Person
-    sameAs = [] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
-    images = ["cover.png"] # ["cover.png"] (default)
     article = [] # Article sections
+    images = ["cover.png"] # ["cover.png"] (default)
+    logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
+    name = "Tam" # Name of Organization or Person
     newsArticle = [] # NewsArticle sections
-    blogPosting = ["blog"] # BlogPosting sections
+    sameAs = [
+    ] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
+    type = "Organization" # Organization (default) or Person
+    # blogPosting = ["blog"] # BlogPosting sections
     product = [] # Product sections

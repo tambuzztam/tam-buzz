@@ -14456,11 +14456,28 @@ body {
   background-color: {{ site.Params.doks.backGround }};
 }
 */
-.my-hero h1.title, .my-hero .title.h1 {
-  font-size: larger;
-  display: inline-flex !important; }
+.message {
+  opacity: .2; }
+  .message h1.invitation, .message .invitation.h1 {
+    animation: fadeIn 2s ease-in 1;
+    display: inline-flex !important;
+    padding-inline-end: 2%; }
 
-.my-hero h2.lead, .my-hero .lead.h2 {
-  display: inline-flex !important; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .message h1.subject, .message .subject.h1 {
+    display: inline-flex !important;
+    color: firebrick; }
+
+.tamline h1.star, .tamline .star.h1 {
+  display: inline-flex !important;
+  padding-inline-end: 5%; }
+
+.tamline h1.tam, .tamline .tam.h1 {
+  display: inline-flex !important;
+  color: firebrick; }
 
 /*# sourceMappingURL=main.css.map */

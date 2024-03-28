@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to Doks on Tam</title>
+    <title>Tam philosophical counseling on Tam</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to Doks on Tam</description>
+    <description>Recent content in Tam philosophical counseling on Tam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright (c) 2024- Tam</copyright>
-    <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2024 12:16:58 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Post</title>
@@ -15,6 +15,13 @@
       <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
       <guid>http://localhost:1313/blog/example/</guid>
       <description>You can use blog posts for announcing product updates and features.</description>
+    </item>
+    <item>
+      <title>Ipsum</title>
+      <link>http://localhost:1313/sciences/lorem/ipsum/</link>
+      <pubDate>Tue, 26 Mar 2024 12:16:58 -0500</pubDate>
+      <guid>http://localhost:1313/sciences/lorem/ipsum/</guid>
+      <description></description>
     </item>
     <item>
       <title>Example Guide</title>
