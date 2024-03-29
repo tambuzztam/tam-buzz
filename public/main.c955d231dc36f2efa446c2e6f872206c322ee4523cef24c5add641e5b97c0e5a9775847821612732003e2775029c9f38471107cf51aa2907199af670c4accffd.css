@@ -14457,8 +14457,8 @@ body {
 }
 */
 div.message {
-  opacity: .2;
-  padding-bottom: 20px; }
+  opacity: .5;
+  padding-bottom: 40px; }
   div.message.hidden {
     display: none; }
   div.message h1.invitation, div.message .invitation.h1 {

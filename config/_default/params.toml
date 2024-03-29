@@ -2,7 +2,7 @@
 description = "Philosophical Counseling. Certified by the APPA."
 
 # [titles]
-title1 = "Philosophic Conversation"
+title1 = "Philosophic Conversations"
 star = "*"
 tam = "TAM"
 title3 = "Sounds of heart-speak."
@@ -71,7 +71,7 @@ mainSections = ["docs", "sciences"]
   docsVersioning = false # false (default) or true
 
   # UX
-  backgroundDots = false # true (default) or false
+  backgroundDots = true # true (default) or false
   headerBar = false     # true (default) or false
 
   # Homepage

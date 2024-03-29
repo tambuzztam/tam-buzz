@@ -14457,15 +14457,12 @@ body {
 }
 */
 div.message {
-  opacity: .2;
-  padding-bottom: 20px; }
-  div.message.hidden {
-    display: none; }
+  opacity: 0.4;
+  padding-bottom: 10px; }
   div.message h1.invitation, div.message .invitation.h1 {
-    color: firebrick;
     animation: fadeIn 2s ease-in 1;
     display: inline !important;
-    padding-inline-start: 2%; }
+    padding-inline-end: 2%; }
 
 @keyframes fadeIn {
   0% {
@@ -14473,7 +14470,10 @@ div.message {
   100% {
     opacity: 1; } }
   div.message h1.subject, div.message .subject.h1 {
-    display: inline !important; }
+    display: inline !important;
+    color: firebrick; }
+  div.message div.hidden {
+    display: none; }
 
 .tamline h1.star, .tamline .star.h1 {
   display: inline-flex !important;

@@ -1,29 +1,40 @@
 {{ define "main" }}
-{{ $invitations := slice "Hear" "Win" "Feel" "Own" }}
-{{ $subjects := slice "the sounds of heart-speak." "the prize of problems." "the heft of wisdom." "the treasures of mind." }}
 
-{{ $access := math.Rand | mul 4 | math.Floor }}
-{{ $index := int $access }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
-    
-    <div class="row col-lg-12 text-center my-hero">
-      <h1 class="title">{{ site.Params.Title1 }}</h1>
+    <div class="text-center title hidden message">
+      <h1 class="subject">Sound of heart-speak</h1>
+      <h1 class="invitation">Hear it.</h1>
     </div>
-    
-    <div class="row">
-      <div class="d-flex justify-content-center message">
-        <h1 class="invitation">{{ index $invitations $index }}</h1>
-        <h1 class="subject">{{ index $subjects $index }}</h1>
+
+    <div class="text-center title hidden message">
+      <h1 class="subject">Prize the problem</h1>
+      <h1 class="invitation">Win it.</h1>
+    </div>
+
+    <div class="text-center title hidden message">
+      <h1 class="subject">Heft of wisdom</h1>
+      <h1 class="invitation">Feel it.</h1>
+    </div>
+
+    <div class="text-center title hidden message">
+      <h1 class="subject">Treasure mind</h1>
+      <h1 class="invitation">Own it.</h1>
+    </div>
+
+    <div class="text-center">
+      <div class="d-flex justify-content-center my-hero">
+        <h1>{{ site.Params.Title1 }}</h1>
       </div>
-  </div>
-  <div class="row col-lg-12">
-    <div class="d-flex justify-content-end tamline">
-      <h1 class="star">{{ site.Params.Star }}</h1>
-      <h1 class="tam">{{ site.Params.Tam }}</h1>
     </div>
-  </div>
-   
+
+    <div class="col-lg-8">
+      <div class="d-flex justify-content-end tamline">
+        <h1 class="star">{{ site.Params.Star }}</h1>
+        <h1 class="tam">{{ site.Params.Tam }}</h1>
+      </div>
+    </div>
+
     <div class="col-lg-9 col-xl-8 text-center">
       <a
         class="btn btn-primary btn-cta rounded-pill btn-lg my-3"
@@ -33,8 +44,6 @@
       >
       {{ .Content }}
     </div>
-</div>
- 
   </div>
 </section>
 {{ end }} {{ define "sidebar-prefooter" }} {{ if site.Params.doks.backgroundDots
@@ -67,6 +76,15 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const divs = document.querySelectorAll(".message");
+      const randomIndex = Math.floor(Math.random() * divs.length);
+      divs[randomIndex].classList.remove("hidden");
+      console.log(randomIndex);
+      console.log(divs);
+    });
+  </script>
 </section>
 {{ end }} {{ end }} {{ define "sidebar-footer" }} {{ if
 site.Params.doks.sectionFooter -}}
