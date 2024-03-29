@@ -14457,10 +14457,9 @@ body {
 }
 */
 div.message {
-  opacity: .2;
-  padding-bottom: 20px; }
-  div.message.hidden {
-    display: none; }
+  display: none;
+  opacity: 0.4;
+  padding-bottom: 5px; }
   div.message h1.invitation, div.message .invitation.h1 {
     color: firebrick;
     animation: fadeIn 2s ease-in 1;
@@ -14474,6 +14473,8 @@ div.message {
     opacity: 1; } }
   div.message h1.subject, div.message .subject.h1 {
     display: inline !important; }
+  div.message div.hidden {
+    display: none; }
 
 .tamline h1.star, .tamline .star.h1 {
   display: inline-flex !important;

@@ -1,7 +1,13 @@
 // Put your custom SCSS code here  {
-.message {
+div.message {
   opacity: .2;
+  padding-bottom: 20px;
+  &.hidden {
+    display: none;
+  }
+
   h1.invitation {
+    color: firebrick;
     @include keyframes(fadeIn) {
       0% {
         opacity: 0;
@@ -10,18 +16,14 @@
         opacity: 1;
       }
     }
-    @include animate(fadeIn, 2s, ease-in, 1); 
-    display: inline-flex !important;
-    padding-inline-end: 2%;
+    @include animate(fadeIn, 2s, ease-in, 1);
+    display: inline !important;
+    padding-inline-start: 2%;
 
   }
 
-    
-
-
   h1.subject {
-    display: inline-flex !important;
-    color: firebrick;
+    display: inline !important;
   }
 }
 

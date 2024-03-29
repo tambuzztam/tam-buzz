@@ -14456,24 +14456,25 @@ body {
   background-color: {{ site.Params.doks.backGround }};
 }
 */
-div.message {
-  opacity: .2;
-  padding-bottom: 20px; }
-  div.message.hidden {
-    display: none; }
-  div.message h1.invitation, div.message .invitation.h1 {
-    color: firebrick;
+.message {
+  opacity: 0.4; }
+  .message h1.invitation, .message .invitation.h1 {
     animation: fadeIn 2s ease-in 1;
-    display: inline !important;
-    padding-inline-start: 2%; }
+    display: inline-flex !important;
+    padding-inline-end: 2%; }
 
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  div.message h1.subject, div.message .subject.h1 {
-    display: inline !important; }
+    .message h1.invitation h1.subject, .message .invitation.h1 h1.subject, .message h1.invitation .subject.h1, .message .invitation.h1 .subject.h1 {
+      display: inline-flex !important;
+      color: firebrick; }
+
+h1.subject, .subject.h1 {
+  display: inline-flex !important;
+  color: firebrick; }
 
 .tamline h1.star, .tamline .star.h1 {
   display: inline-flex !important;

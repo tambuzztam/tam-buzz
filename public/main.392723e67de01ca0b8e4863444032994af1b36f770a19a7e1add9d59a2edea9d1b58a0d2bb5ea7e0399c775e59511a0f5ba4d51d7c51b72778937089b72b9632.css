@@ -14457,15 +14457,14 @@ body {
 }
 */
 div.message {
-  opacity: .2;
-  padding-bottom: 20px; }
+  opacity: 1; }
   div.message.hidden {
     display: none; }
   div.message h1.invitation, div.message .invitation.h1 {
     color: firebrick;
     animation: fadeIn 2s ease-in 1;
     display: inline !important;
-    padding-inline-start: 2%; }
+    padding-inline-start: 4%; }
 
 @keyframes fadeIn {
   0% {
