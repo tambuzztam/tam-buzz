@@ -1,7 +1,7 @@
 // Put your custom SCSS code here  {
 div.message {
   opacity: .2;
-  padding-bottom: 20px;
+  padding-bottom: 54px;
   &.hidden {
     display: none;
   }
@@ -36,4 +36,9 @@ div.message {
     display: inline-flex !important;
     color: firebrick;
   }
+}
+
+.site-description {
+  columns: 2;
+  break-inside: avoid;
 }

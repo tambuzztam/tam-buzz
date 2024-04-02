@@ -34,7 +34,8 @@
       "summary",
       "svg",
       "title",
-      "ul"
+      "ul",
+      "wbr"
     ],
     "classes": [
       "active",
