@@ -6,7 +6,6 @@
       "base",
       "body",
       "button",
-      "code",
       "details",
       "div",
       "footer",
@@ -163,10 +162,20 @@
     ],
     "ids": [
       "TableOfContents",
+      "analytics",
+      "changes-to-this-privacy-policy",
+      "contact-us",
+      "effective-date-040424",
       "further-reading",
+      "information-we-do-not-collect",
+      "introduction",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
-      "toc"
+      "privacy-policy",
+      "security",
+      "third-party-services",
+      "toc",
+      "tracking--cookies"
     ]
   }
 }
