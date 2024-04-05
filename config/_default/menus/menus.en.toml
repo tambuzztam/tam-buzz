@@ -23,15 +23,16 @@
 #   weight = 10
 #   identifier = "lorem"
 #   url = "/tutorial/lorem/"
-[[main]]
-  name = "Docs"
-  url = "/docs/guides/example-guide/"
-  weight = 10
 
-[[main]]
-  name = "Sciences"
-  url = "/sciences/"
-  weight = 20
+# [[main]]
+#   name = "Docs"
+#   url = "/docs/guides/example-guide/"
+#   weight = 10
+
+# [[main]]
+#   name = "Sciences"
+#   url = "/sciences/"
+#   weight = 20
 
 # [[main]]
 #   name = "Blog"
