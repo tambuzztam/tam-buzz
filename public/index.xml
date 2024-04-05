@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright (c) 2024- Tam</copyright>
-    <lastBuildDate>Tue, 26 Mar 2024 12:16:58 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 07 Apr 2024 17:19:07 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Post</title>
@@ -38,11 +38,18 @@
       <description>Reference pages are ideal for outlining how things work in terse and clear terms. Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.</description>
     </item>
     <item>
-      <title>Privacy Policy</title>
+      <title></title>
       <link>http://localhost:1313/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
       <guid>http://localhost:1313/privacy/</guid>
-      <description>Privacy Policy Effective Date: 04/04/24 Introduction: At tam.buzz, we are committed to maintaining the trust and confidence of visitors to our web site.</description>
+      <description>Privacy Policy Effective Date: 04/04/24&#xA;Introduction: At tam.buzz, we are committed to maintaining the trust and confidence of visitors to our web site.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post-booking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post-booking/</guid>
+      <description>Booking Complete A session has been reserved just for you. You&amp;rsquo;ll receive a zoom link for our meeting via email. Please look out for that.</description>
     </item>
   </channel>
 </rss>
