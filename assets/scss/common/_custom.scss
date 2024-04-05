@@ -1,4 +1,8 @@
 // Put your custom SCSS code here  {
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
 
 html {
   height: 100%; // Ensure html covers the full document height
@@ -9,6 +13,9 @@ body {
   margin: 0; // Remove default margin
   position: relative; // Context for pseudo-element positioning
   overflow-x: hidden; // Prevent horizontal scrolling caused by the pseudo-element
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
   &::before {
     content: "";
@@ -91,8 +98,3 @@ svg.icon.icon-tabler.icon-tabler-menu {
   columns: 2;
   break-inside: avoid;
 }
-
-
-  .blog-header {
-    display: none;
-  }
