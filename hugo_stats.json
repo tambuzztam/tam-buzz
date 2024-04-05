@@ -127,6 +127,7 @@
       "page-nav",
       "pb-3",
       "position-relative",
+      "post-booking",
       "privacy",
       "reading-time",
       "rounded-pill",
@@ -163,9 +164,9 @@
     "ids": [
       "TableOfContents",
       "analytics",
+      "booking-complete",
       "changes-to-this-privacy-policy",
       "contact-us",
-      "effective-date-040424",
       "further-reading",
       "information-we-do-not-collect",
       "introduction",
@@ -173,6 +174,7 @@
       "offcanvasNavMainLabel",
       "privacy-policy",
       "security",
+      "stay-connected",
       "third-party-services",
       "toc",
       "tracking--cookies"
