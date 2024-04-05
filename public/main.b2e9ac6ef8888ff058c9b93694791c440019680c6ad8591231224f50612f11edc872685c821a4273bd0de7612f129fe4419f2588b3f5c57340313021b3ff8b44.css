@@ -14456,10 +14456,6 @@ body {
   background-color: {{ site.Params.doks.backGround }};
 }
 */
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-  display: none; }
-
 html {
   height: 100%; }
 
@@ -14467,11 +14463,7 @@ body {
   min-height: 100%;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */ }
+  overflow: hidden; }
   body::before {
     content: "";
     position: fixed;
@@ -14533,5 +14525,8 @@ svg.icon.icon-tabler.icon-tabler-menu {
 .site-description {
   columns: 2;
   break-inside: avoid; }
+
+.blog-header {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
