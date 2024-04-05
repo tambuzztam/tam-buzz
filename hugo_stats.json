@@ -37,7 +37,6 @@
       "wbr"
     ],
     "classes": [
-      "active",
       "anchor",
       "bg-dots",
       "blog",
@@ -54,6 +53,7 @@
       "col-lg-10",
       "col-lg-11",
       "col-lg-5",
+      "col-lg-6",
       "col-lg-8",
       "col-lg-9",
       "col-md-12",
@@ -109,7 +109,6 @@
       "mx-2",
       "my-3",
       "my-hero",
-      "nav-item",
       "nav-link",
       "navbar",
       "navbar-brand",
