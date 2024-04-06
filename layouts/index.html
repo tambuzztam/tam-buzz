@@ -95,8 +95,14 @@
       divs.forEach((div) => div.classList.add("hidden"));
       const randomIndex = Math.floor(Math.random() * divs.length);
       divs[randomIndex].classList.remove("hidden");
-      console.log(randomIndex);
-      console.log(divs);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const initialViewportHeight = window.innerHeight + "px";
+        document.documentElement.style.setProperty(
+          "--viewport-height",
+          initialViewportHeight,
+        );
+      });
     });
   </script>
 </section>

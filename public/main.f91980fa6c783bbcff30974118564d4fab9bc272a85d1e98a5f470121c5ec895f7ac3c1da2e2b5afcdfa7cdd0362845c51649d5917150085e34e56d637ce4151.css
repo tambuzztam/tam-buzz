@@ -14460,14 +14460,11 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
-:root {
-  --viewport-height: 100vh; }
-
 html {
   height: 100%; }
 
 body {
-  min-height: var(--viewport-height);
+  min-height: 100%;
   margin: 0;
   position: relative;
   overflow-x: hidden;
@@ -14481,7 +14478,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background: url("inverse_coldmountain@0.5x.jpg") no-repeat center 10%;
     background-size: cover;
     opacity: 0.08;
