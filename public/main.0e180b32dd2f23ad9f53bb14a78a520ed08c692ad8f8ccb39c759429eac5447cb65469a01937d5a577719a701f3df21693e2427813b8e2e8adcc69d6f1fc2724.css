@@ -14460,14 +14460,11 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
-:root {
-  --viewport-height: 100vh; }
-
 html {
   height: 100%; }
 
 body {
-  min-height: var(--viewport-height);
+  min-height: 100vh;
   margin: 0;
   position: relative;
   overflow-x: hidden;

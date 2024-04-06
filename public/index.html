@@ -8,7 +8,7 @@
 <link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
 
-<link rel="stylesheet" href="/main.f91980fa6c783bbcff30974118564d4fab9bc272a85d1e98a5f470121c5ec895f7ac3c1da2e2b5afcdfa7cdd0362845c51649d5917150085e34e56d637ce4151.css" integrity="sha512-&#43;RmA&#43;mx4O7z/MJdBGFZNT6ubwnKoXR6YpfRwEhxeyJX3rDwdouK1r836fN0DYoRcUWSdWRcVAIXjTlbWN85BUQ==" crossorigin="anonymous">
+<link rel="stylesheet" href="/main.383559e5f8f1e65d4ea25c574b79ef514eaaaed3000c1a65efce3e93bf4187e3808e28deb0228c6d512265ed8cedd1771edf156d472ed2929e82c5cff7ad0e0b.css" integrity="sha512-ODVZ5fjx5l1OolxXS3nvUU6qrtMADBpl784&#43;k79Bh&#43;OAjijesCKMbVEiZe2M7dF3Ht8VbUcu0pKegsXP960OCw==" crossorigin="anonymous">
 
 <noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/">
   <link rel="canonical" href="http://localhost:1313/">
@@ -226,8 +226,14 @@
       divs.forEach((div) => div.classList.add("hidden"));
       const randomIndex = Math.floor(Math.random() * divs.length);
       divs[randomIndex].classList.remove("hidden");
-      console.log(randomIndex);
-      console.log(divs);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const initialViewportHeight = window.innerHeight + "px";
+        document.documentElement.style.setProperty(
+          "--viewport-height",
+          initialViewportHeight,
+        );
+      });
     });
   </script>
 </section>

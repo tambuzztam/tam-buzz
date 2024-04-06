@@ -4,12 +4,16 @@
   display: none;
 }
 
+:root {
+  --viewport-height: 100vh;
+}
+
 html {
   height: 100%; // Ensure html covers the full document height
 }
 
 body {
-  min-height: 100%; // Ensure body covers at least the full viewport, but can expand
+  min-height: var(--viewport-height); // Ensure body covers at least the full viewport, but can expand
   margin: 0; // Remove default margin
   position: relative; // Context for pseudo-element positioning
   overflow-x: hidden; // Prevent horizontal scrolling caused by the pseudo-element
@@ -23,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; // Cover the viewport height
+    min-height: 100vh; // Cover the viewport height
     background: url("inverse_coldmountain@0.5x.jpg") no-repeat center 10%;
     background-size: cover;
     opacity: 0.08;
