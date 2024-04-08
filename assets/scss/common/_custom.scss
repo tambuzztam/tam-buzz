@@ -43,7 +43,7 @@ div.message {
   }
 
   h1.invitation {
-    color: firebrick;
+    color: #b22222;
     @include keyframes(fadeIn) {
       0% {
         opacity: 0;
@@ -69,7 +69,7 @@ div.message {
   }
   h1.tam {
     display: inline-flex !important;
-    color: firebrick;
+    color: #b22222;
   }
 
   @media (min-width: 960px) and (max-width: 991px) {

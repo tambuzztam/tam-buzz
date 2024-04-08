@@ -4,7 +4,7 @@
   weight = 10
   [en.params]
     # alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
-    footer = "copyright © 2024 tambuzztam LLC"
+    footer = "© 2024 tambuzztam LLC"
     languageISO = "EN"
     languageTag = "en-US"
 

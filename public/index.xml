@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tam philosophical counseling on Tam</title>
+    <title>Tam</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Tam philosophical counseling on Tam</description>
+    <description>Recent content on Tam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2024- Tam</copyright>
+    <copyright>(c) 2024- Tam</copyright>
     <lastBuildDate>Sun, 07 Apr 2024 17:19:07 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -38,14 +38,14 @@
       <description>Reference pages are ideal for outlining how things work in terse and clear terms. Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.</description>
     </item>
     <item>
-      <title></title>
+      <title>Privacy Policy</title>
       <link>http://localhost:1313/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
       <guid>http://localhost:1313/privacy/</guid>
       <description>Privacy Policy Effective Date: 04/04/24&#xA;Introduction: At tam.buzz, we are committed to maintaining the trust and confidence of visitors to our web site.</description>
     </item>
     <item>
-      <title></title>
+      <title>Post-booking</title>
       <link>http://localhost:1313/post-booking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post-booking/</guid>
