@@ -1,14 +1,13 @@
 ---
-title: ""
+title: "Post-booking"
 description: "Redirect from Calendly"
 summary: ""
 date: 
 lastmod: 
 draft: false
-toc: false
 type: "legal"
 seo:
-  title: "Post-booking page" # custom title (optional)
+  title: # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true

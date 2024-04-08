@@ -1,5 +1,5 @@
 ---
-title : "Tam philosophical counseling"
+title : ""
 description: "philosophcial conversation as a service"
 lead: ""
 date: 2023-09-07T16:33:54+02:00

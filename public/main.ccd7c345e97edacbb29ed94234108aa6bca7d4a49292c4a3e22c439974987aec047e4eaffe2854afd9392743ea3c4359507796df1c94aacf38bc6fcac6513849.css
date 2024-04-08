@@ -14493,7 +14493,7 @@ div.message {
   div.message.hidden {
     display: none; }
   div.message h1.invitation, div.message .invitation.h1 {
-    color: #b22222;
+    color: #FA5252;
     animation: fadeIn 2s ease-in 1;
     display: inline !important;
     padding-inline-start: 2%; }
@@ -14512,7 +14512,7 @@ div.message {
 
 .tamline h1.tam, .tamline .tam.h1 {
   display: inline-flex !important;
-  color: #b22222; }
+  color: #FA5252; }
 
 @media (min-width: 960px) and (max-width: 991px) {
   .tamline h1.tam, .tamline .tam.h1 {
