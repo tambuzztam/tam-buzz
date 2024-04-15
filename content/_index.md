@@ -1,6 +1,6 @@
 ---
 title : ""
-description: "philosophcial conversation as a service"
+description: "Prize the problem"
 lead: ""
 date: 2023-09-07T16:33:54+02:00
 lastmod: 2023-09-07T16:33:54+02:00
