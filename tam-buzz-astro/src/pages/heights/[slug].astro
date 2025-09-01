@@ -1,0 +1,122 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const heightsContent = await getCollection('heights');
+  return heightsContent.map((content) => ({
+    params: { slug: content.slug },
+    props: { content },
+  }));
+}
+
+const { content } = Astro.props;
+const { Content } = await content.render();
+---
+
+<Layout title={`${content.data.title} - The Heights`} description={content.data.description}>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur z-50 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/heights" class="text-xl font-semibold hover:text-blue-400 transition-colors">← The Heights</a>
+      <div class="flex space-x-6">
+        <a href="/heights" class="text-blue-400 font-medium">The Heights</a>
+        <a href="/depths" class="text-gray-300 hover:text-white transition-colors">The Depths</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="pt-24 pb-20">
+    <!-- Header -->
+    <header class="px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-8">
+          <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          </svg>
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {content.data.title}
+        </h1>
+        
+        {content.data.description && (
+          <p class="text-xl text-gray-300 mb-8">
+            {content.data.description}
+          </p>
+        )}
+        
+        <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+          <time datetime={content.data.date.toISOString()}>
+            {content.data.date.toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </time>
+          
+          {content.data.tags && content.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {content.data.tags.map(tag => (
+                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg sm:prose-xl prose-invert max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Navigation Footer -->
+  <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <a 
+          href="/heights" 
+          class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to The Heights
+        </a>
+        
+        <a 
+          href="/depths" 
+          class="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors"
+        >
+          Explore The Depths
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-gray-400 mb-6">
+          Ready to explore these ideas in conversation?
+        </p>
+        <a 
+          href="https://calendly.com/tam-benp/philosophical-counseling" 
+          class="inline-block px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Schedule Your Session
+        </a>
+      </div>
+    </div>
+  </footer>
+</Layout>
