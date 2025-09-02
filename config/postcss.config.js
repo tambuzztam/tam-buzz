@@ -9,12 +9,12 @@ module.exports = {
       content: ["./hugo_stats.json"],
       extractors: [
         {
-          extractor: (content) => {
+          extractor: content => {
             const els = JSON.parse(content).htmlElements;
             return els.tags.concat(els.classes, els.ids);
           },
-          extensions: ["json"],
-        },
+          extensions: ["json"]
+        }
       ],
       dynamicAttributes: [
         "aria-expanded",
@@ -29,7 +29,7 @@ module.exports = {
         "data-toggle-tab", // tabs.js
         "id",
         "size",
-        "type",
+        "type"
       ],
       safelist: [
         "active",
@@ -60,9 +60,9 @@ module.exports = {
           "./assets/scss/**/*.scss",
           "./node_modules/@hyas/doks-core/assets/scss/components/_code.scss",
           "./node_modules/@hyas/doks-core/assets/scss/components/_expressive-code.scss",
-          "./node_modules/@hyas/doks-core/assets/scss/common/_syntax.scss",
-        ]),
-      ],
-    }),
-  ],
+          "./node_modules/@hyas/doks-core/assets/scss/common/_syntax.scss"
+        ])
+      ]
+    })
+  ]
 };

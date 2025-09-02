@@ -19,6 +19,7 @@ A session has been reserved just for you.
 You'll receive a zoom link for our meeting via email. Please look out for that.
 
 <!-- Session Details -->
+
 <!--
 Mode: [In-Person/Zoom] (You'll receive a zoom link via email.)
 Preparing for Your Session

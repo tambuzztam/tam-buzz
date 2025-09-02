@@ -22,4 +22,4 @@ Guides lead a user through a specific task they want to accomplish, often with a
 
 ## Further reading
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+* Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework

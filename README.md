@@ -21,7 +21,7 @@ Automatically deploys to [tam.buzz](https://tam.buzz) via Netlify on push to mai
 
 ## Tech Stack
 
-- **Framework**: Hugo static site generator
-- **Hosting**: Netlify
-- **Domain**: tam.buzz
-- **Package Manager**: pnpm
+* **Framework**: Hugo static site generator
+* **Hosting**: Netlify
+* **Domain**: tam.buzz
+* **Package Manager**: pnpm
