@@ -54,6 +54,6 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    # CSP allowing Netlify subdomains for preview deployments and cross-origin resources
-    Content-Security-Policy = "default-src 'self' *.netlify.app; script-src 'self' *.netlify.app; style-src 'self' *.netlify.app 'unsafe-inline'; font-src 'self' *.netlify.app data: https:; img-src 'self' *.netlify.app https: data:; connect-src 'self' *.netlify.app https:; manifest-src 'self' *.netlify.app; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';"
+    # CSP allowing cross-origin resources for Netlify deployments
+    Content-Security-Policy = "default-src 'self' *.netlify.app https://app.netlify.com; script-src 'self' *.netlify.app; style-src 'self' *.netlify.app 'unsafe-inline'; font-src 'self' *.netlify.app data: https:; img-src 'self' *.netlify.app https: data:; connect-src 'self' *.netlify.app https:; manifest-src 'self' *.netlify.app; object-src 'none'; base-uri 'self' *.netlify.app; frame-src 'self' *.netlify.app https://app.netlify.com; frame-ancestors 'none'; form-action 'self';"
     Cache-Control = "public, max-age=31536000"
