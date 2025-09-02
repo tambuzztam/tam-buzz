@@ -97,10 +97,16 @@
       const selectedDiv = divs[randomIndex];
       selectedDiv.classList.remove("hidden");
       
-      // Trigger animation after element is visible
-      setTimeout(() => {
-        selectedDiv.classList.add("animate");
-      }, 50);
+      // Trigger animation after element is visible and DOM has updated
+      console.log('Selected div:', selectedDiv);
+      console.log('Div classes before animation:', selectedDiv.classList.toString());
+      
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          selectedDiv.classList.add("animate");
+          console.log('Added animate class. Div classes now:', selectedDiv.classList.toString());
+        });
+      });
 
       document.addEventListener("DOMContentLoaded", function () {
         const initialViewportHeight = window.innerHeight + "px";
