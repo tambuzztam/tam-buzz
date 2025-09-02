@@ -30,19 +30,26 @@
   autoLaunch = false
 
 # Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
-# Force HTTPS redirect
+# Redirect all Netlify subdomain traffic to custom domain
 [[redirects]]
-  from = "http://tam-buzz.netlify.app/*"
-  to = "https://tam-buzz.netlify.app/:splat"
+  from = "https://tam-buzz.netlify.app/*"
+  to = "https://tam.buzz/:splat"
   status = 301
   force = true
 
-# Force HTTPS for custom domain if you have one
-# [[redirects]]
-#   from = "http://your-custom-domain.com/*"
-#   to = "https://your-custom-domain.com/:splat"
-#   status = 301
-#   force = true
+# Force HTTPS redirect for Netlify subdomain then redirect to custom domain
+[[redirects]]
+  from = "http://tam-buzz.netlify.app/*"
+  to = "https://tam.buzz/:splat"
+  status = 301
+  force = true
+
+# Force HTTPS for custom domain
+[[redirects]]
+  from = "http://tam.buzz/*"
+  to = "https://tam.buzz/:splat"
+  status = 301
+  force = true
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
 # Following modern CSP best practices with progressive security
@@ -54,6 +61,10 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "payment=(), usb=()"
-    # CSP allowing cross-origin resources for Netlify deployments
-    Content-Security-Policy = "default-src 'self' *.netlify.app https://app.netlify.com; script-src 'self' *.netlify.app; style-src 'self' *.netlify.app 'unsafe-inline'; font-src 'self' *.netlify.app data: https:; img-src 'self' *.netlify.app https: data:; connect-src 'self' *.netlify.app https:; manifest-src 'self' *.netlify.app; object-src 'none'; base-uri 'self' *.netlify.app; frame-src 'self' *.netlify.app https://app.netlify.com; frame-ancestors 'none'; form-action 'self';"
+    # CSP for tam.buzz domain
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; img-src 'self' https://avatars.githubusercontent.com data:; connect-src 'self' https:; manifest-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'self'; frame-ancestors 'none'; form-action 'self';"
+    # Allow cross-origin requests (keeping for compatibility)
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
+    Access-Control-Allow-Headers = "*"
     Cache-Control = "public, max-age=31536000"

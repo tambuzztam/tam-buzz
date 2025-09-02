@@ -4,10 +4,10 @@ A modern philosophical counseling website built with Astro and Tailwind CSS, fea
 
 ## Architecture
 
-- **Landing Page**: Single-page scroll design with conversion-focused sections
-- **The Heights**: Aspirational philosophical content (meaning, purpose, vision)
-- **The Depths**: Foundational content (assumptions, beliefs, root examination)
-- **Obsidian Integration**: Content sourced from your Obsidian vault
+* **Landing Page**: Single-page scroll design with conversion-focused sections
+* **The Heights**: Aspirational philosophical content (meaning, purpose, vision)
+* **The Depths**: Foundational content (assumptions, beliefs, root examination)
+* **Obsidian Integration**: Content sourced from your Obsidian vault
 
 ## Development Setup
 
@@ -35,7 +35,7 @@ Your Obsidian vault should have this structure:
 
 To connect your Obsidian content, you can either:
 
-1. Create symlinks (for development):
+1.  Create symlinks (for development):
 
 ```bash
 # Remove placeholder content
@@ -46,7 +46,7 @@ ln -s ~/obsidian/death-of-socrates/distribution/tam-buzz/heights/* src/content/h
 ln -s ~/obsidian/death-of-socrates/distribution/tam-buzz/depths/* src/content/depths/
 ```
 
-1. Copy content during build (for production):
+1.  Copy content during build (for production):
 
 ```bash
 # Update package.json build script
@@ -73,42 +73,42 @@ Regular markdown content with Obsidian features like [[wikilinks]] and anchors.
 
 ### Publishing Workflow
 
-1. **Write** in your Obsidian source folder
-1. **Curate** finished pieces to `distribution/tam-buzz/heights/` or `distribution/tam-buzz/depths/`
-1. **Build** the site (Astro picks up changes automatically)
-1. **Deploy** via Netlify
+1.  **Write** in your Obsidian source folder
+1.  **Curate** finished pieces to `distribution/tam-buzz/heights/` or `distribution/tam-buzz/depths/`
+1.  **Build** the site (Astro picks up changes automatically)
+1.  **Deploy** via Netlify
 
 ## Site Structure
 
-- `/` - Landing page with conversion flow
-- `/heights` - Overview of aspirational content
-- `/heights/[slug]` - Individual heights articles
-- `/depths` - Overview of foundational content
-- `/depths/[slug]` - Individual depths articles
+* `/` - Landing page with conversion flow
+* `/heights` - Overview of aspirational content
+* `/heights/[slug]` - Individual heights articles
+* `/depths` - Overview of foundational content
+* `/depths/[slug]` - Individual depths articles
 
 ## Design System
 
-- **Dark theme** with gray-900 background
-- **Blue accent** (#60a5fa) for Heights content
-- **Amber accent** (#f59e0b) for Depths content
-- **Responsive design** mobile-first with Tailwind breakpoints
-- **Typography** optimized for philosophical content reading
+* **Dark theme** with gray-900 background
+* **Blue accent** (#60a5fa) for Heights content
+* **Amber accent** (#f59e0b) for Depths content
+* **Responsive design** mobile-first with Tailwind breakpoints
+* **Typography** optimized for philosophical content reading
 
 ## Mountain Metaphor
 
 The site uses the metaphor of Tam as a mountain:
 
-- **The Heights**: Gaining perspective, seeing the bigger picture
-- **The Depths**: Examining foundations, exploring what lies beneath
-- **Progressive disclosure**: Users choose their path of exploration
+* **The Heights**: Gaining perspective, seeing the bigger picture
+* **The Depths**: Examining foundations, exploring what lies beneath
+* **Progressive disclosure**: Users choose their path of exploration
 
 ## Deployment
 
 ### Netlify Setup
 
-1. Connect your GitHub repo to Netlify
-1. Build settings are configured in `netlify.toml`
-1. Deploy automatically on push to main branch
+1.  Connect your GitHub repo to Netlify
+1.  Build settings are configured in `netlify.toml`
+1.  Deploy automatically on push to main branch
 
 | Command           | Action                                      |
 | :---------------- | :------------------------------------------ |

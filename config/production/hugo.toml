@@ -1,4 +1,4 @@
 # Overrides for production environment
 # Configure HTTPS for production
-baseurl = "https://tam-buzz.netlify.app"
+baseurl = "https://tam.buzz"
 canonifyURLs = true

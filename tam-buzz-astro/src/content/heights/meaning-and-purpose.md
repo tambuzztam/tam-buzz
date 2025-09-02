@@ -14,8 +14,8 @@ Meaning isn't something we find like a lost object. It's something we create thr
 
 In our sessions, we explore:
 
-- What gives your life significance?
-- How do you want to be remembered?
-- What legacy do you want to leave?
+* What gives your life significance?
+* How do you want to be remembered?
+* What legacy do you want to leave?
 
 These aren't abstract questions—they're practical tools for living with intention.

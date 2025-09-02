@@ -12,10 +12,10 @@ Hidden assumptions are beliefs we hold so deeply that we don't recognize them as
 
 ## Common Hidden Assumptions
 
-- "Success means being busy"
-- "Love requires sacrifice of the self"
-- "Security comes from external validation"
-- "Conflict is always destructive"
+* "Success means being busy"
+* "Love requires sacrifice of the self"
+* "Security comes from external validation"
+* "Conflict is always destructive"
 
 ## The Practice of Assumption-Hunting
 
