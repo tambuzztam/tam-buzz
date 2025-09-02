@@ -1,6 +1,6 @@
 # Tam Buzz
 
-Personal website for philosophical counseling services built with Hugo.
+Website for philosophical counseling services built with Hugo.
 
 ## Development
 

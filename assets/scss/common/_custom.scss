@@ -8,12 +8,24 @@
   --viewport-height: 100vh;
 }
 
+/* Animation for hero section fadeIn effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   height: 100%; // Ensure html covers the full document height
 }
 
 body {
-  min-height: var(--viewport-height); // Ensure body covers at least the full viewport, but can expand
+  min-height: var(
+    --viewport-height
+  ); // Ensure body covers at least the full viewport, but can expand
   margin: 0; // Remove default margin
   position: relative; // Context for pseudo-element positioning
   overflow-x: hidden; // Prevent horizontal scrolling caused by the pseudo-element
@@ -44,17 +56,10 @@ div.message {
 
   h1.invitation {
     color: #b22222;
-    @include keyframes(fadeIn) {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    @include animate(fadeIn, 2s, ease-in, 1);
     display: inline !important;
     padding-inline-start: 2%;
+    animation: fadeIn 2s ease-in 1;
+    opacity: 1;
   }
 
   h1.subject {

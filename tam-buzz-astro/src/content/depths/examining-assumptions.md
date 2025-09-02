@@ -1,4 +1,4 @@
-______________________________________________________________________
+---
 
 ## title: "The Assumptions We Don't See" description: "Uncovering the hidden beliefs that shape our decisions" date: 2024-01-20 tags: ["assumptions", "beliefs", "self-examination"]
 
