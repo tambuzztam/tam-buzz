@@ -1,10 +1,2 @@
 // Put your custom SCSS variables here
-@mixin keyframes($name){
-    @keyframes #{$name}{
-        @content;
-    }
-}
-
-@mixin animate($animation,$duration,$method,$times){
-    animation: $animation $duration $method $times;
-}
+// Mixins removed - using standard CSS animations instead
