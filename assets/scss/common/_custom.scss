@@ -40,9 +40,8 @@ body {
     left: 0;
     width: 100%;
     min-height: 100vh; // Cover the viewport height
-    // background: url("inverse_coldmountain@0.5x.jpg") no-repeat center 10%; // Image missing
-    // background-size: cover;
-    background: linear-gradient(135deg, rgba(93, 47, 134, 0.03), rgba(178, 34, 34, 0.02)); // Subtle gradient instead
+    background: url("inverse_coldmountain@0.5x.jpg") no-repeat center 10%;
+    background-size: cover;
     opacity: 0.08;
     z-index: -1;
   }
