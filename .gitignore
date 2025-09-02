@@ -13,3 +13,6 @@ resources/
 
 # Hugo temporary files
 .hugo_build.lock
+
+# Netlify CLI
+.netlify/
