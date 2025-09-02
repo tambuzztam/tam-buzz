@@ -58,8 +58,11 @@ div.message {
     color: #b22222;
     display: inline !important;
     padding-inline-start: 2%;
-    animation: fadeIn 2s ease-in 1;
-    opacity: 1;
+    opacity: 0;
+  }
+
+  &.animate h1.invitation {
+    animation: fadeIn 2s ease-in forwards;
   }
 
   h1.subject {

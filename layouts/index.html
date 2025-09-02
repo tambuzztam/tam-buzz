@@ -94,7 +94,13 @@
       const divs = document.querySelectorAll(".message");
       divs.forEach((div) => div.classList.add("hidden"));
       const randomIndex = Math.floor(Math.random() * divs.length);
-      divs[randomIndex].classList.remove("hidden");
+      const selectedDiv = divs[randomIndex];
+      selectedDiv.classList.remove("hidden");
+      
+      // Trigger animation after element is visible
+      setTimeout(() => {
+        selectedDiv.classList.add("animate");
+      }, 50);
 
       document.addEventListener("DOMContentLoaded", function () {
         const initialViewportHeight = window.innerHeight + "px";
