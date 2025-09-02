@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const depthsContent = await getCollection('depths');
+const sortedContent = depthsContent.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="The Depths - Tam" description="Examine the foundations of your assumptions through philosophical inquiry">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur z-50 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold hover:text-amber-400 transition-colors">← Back to Tam</a>
+      <div class="flex space-x-6">
+        <a href="/heights" class="text-gray-300 hover:text-white transition-colors">The Heights</a>
+        <a href="/depths" class="text-amber-400 font-medium">The Depths</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="w-20 h-20 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-8">
+        <svg class="w-10 h-10 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        The Depths
+      </h1>
+      
+      <p class="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+        Examine the foundations of your assumptions through philosophical inquiry
+      </p>
+      
+      <div class="prose prose-lg prose-invert max-w-none mb-16">
+        <p class="text-gray-400">
+          Like a mountain's roots run deep, our assumptions shape everything above ground. Here you'll find
+          philosophical tools for examining beliefs, questioning foundations, and discovering what lies beneath
+          the surface of your thinking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <section class="pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sortedContent.map((content) => (
+          <a href={`/depths/${content.slug}`} class="group block">
+            <article class="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800 transition-colors border border-gray-700 hover:border-amber-400/50">
+              <h2 class="text-xl font-semibold mb-3 group-hover:text-amber-400 transition-colors">
+                {content.data.title}
+              </h2>
+              
+              {content.data.description && (
+                <p class="text-gray-300 mb-4 line-clamp-3">
+                  {content.data.description}
+                </p>
+              )}
+              
+              <div class="flex items-center justify-between text-sm text-gray-400">
+                <time datetime={content.data.date.toISOString()}>
+                  {content.data.date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </time>
+                
+                {content.data.tags && content.data.tags.length > 0 && (
+                  <div class="flex flex-wrap gap-2">
+                    {content.data.tags.slice(0, 2).map(tag => (
+                      <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        Ready to excavate your assumptions?
+      </h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Schedule a philosophical counseling session to examine the beliefs that shape your choices.
+      </p>
+      <a 
+        href="https://calendly.com/tam-benp/philosophical-counseling" 
+        class="inline-block px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white text-lg font-semibold rounded-lg transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Schedule Your Session
+      </a>
+    </div>
+  </section>
+</Layout>

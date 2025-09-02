@@ -6,3 +6,13 @@ build
 .DS_Store
 .idea/
 .vscode/
+
+# Hugo build output
+public/
+resources/
+
+# Hugo temporary files
+.hugo_build.lock
+
+# Netlify CLI
+.netlify/
