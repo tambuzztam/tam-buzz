@@ -45,17 +45,15 @@
 #   force = true
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
+# Following modern CSP best practices with progressive security
 [[headers]]
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; manifest-src 'self'; connect-src 'self' https:; font-src 'self' data:; img-src 'self' https://avatars.githubusercontent.com data: https:; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'"
     X-Frame-Options = "SAMEORIGIN"
-    Referrer-Policy = "strict-origin"
-    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
-    Cache-Control= '''
-    public,
-    max-age=31536000'''
-    Access-Control-Allow-Origin = "*"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # CSP allowing Netlify subdomains for preview deployments and cross-origin resources
+    Content-Security-Policy = "default-src 'self' *.netlify.app; script-src 'self' *.netlify.app; style-src 'self' *.netlify.app 'unsafe-inline'; font-src 'self' *.netlify.app data: https:; img-src 'self' *.netlify.app https: data:; connect-src 'self' *.netlify.app https:; manifest-src 'self' *.netlify.app; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';"
+    Cache-Control = "public, max-age=31536000"
