@@ -1,9 +1,6 @@
----
-title: "Finding Meaning in Life's Questions"
-description: "How philosophical inquiry opens pathways to purpose"
-date: 2024-01-15
-tags: ["meaning", "purpose", "philosophy"]
----
+______________________________________________________________________
+
+## title: "Finding Meaning in Life's Questions" description: "How philosophical inquiry opens pathways to purpose" date: 2024-01-15 tags: ["meaning", "purpose", "philosophy"]
 
 # Finding Meaning in Life's Questions
 

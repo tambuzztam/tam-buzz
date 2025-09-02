@@ -1,24 +1,24 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const heights = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),
-    draft: z.boolean().optional(),
+    draft: z.boolean().optional()
   })
 });
 
 const depths = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
-    title: z.string(), 
+    title: z.string(),
     description: z.string().optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),
-    draft: z.boolean().optional(),
+    draft: z.boolean().optional()
   })
 });
 
