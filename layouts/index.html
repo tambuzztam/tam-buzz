@@ -89,22 +89,6 @@
       */}}
     </div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const divs = document.querySelectorAll(".message");
-      divs.forEach((div) => div.classList.add("hidden"));
-      const randomIndex = Math.floor(Math.random() * divs.length);
-      divs[randomIndex].classList.remove("hidden");
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const initialViewportHeight = window.innerHeight + "px";
-        document.documentElement.style.setProperty(
-          "--viewport-height",
-          initialViewportHeight,
-        );
-      });
-    });
-  </script>
 </section>
 {{ end }} {{ end }} {{ define "sidebar-footer" }} {{ if
 site.Params.doks.sectionFooter -}}

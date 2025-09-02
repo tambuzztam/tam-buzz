@@ -7,13 +7,13 @@
   NPM_VERSION = "9.5.1"
 
 [context.production]
-  command = "pnpm build"
+  command = "npm run build"
 
 [context.deploy-preview]
-  command = "pnpm build -- -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "pnpm build -- -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.next]
   command = "pnpm build"
@@ -45,17 +45,15 @@
 #   force = true
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
+# Following modern CSP best practices with progressive security
 [[headers]]
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; manifest-src 'self'; connect-src 'self'; font-src 'self'; img-src 'self' https://avatars.githubusercontent.com data:; script-src 'self' 'nonce-dXNlcj0iaGVsbG8iLGRvbWFpbj0iaGVua3ZlcmxpbmRlLmNvbSIsZG9jdW1lbnQud3JpdGUodXNlcisiQCIrZG9tYWluKTs=' 'sha256-aWZ3y/RxbBYKHXH0z8+8ljrHG1mSBvyzSfxSMjBSaXk='; style-src 'self'"
     X-Frame-Options = "SAMEORIGIN"
-    Referrer-Policy = "strict-origin"
-    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
-    Cache-Control= '''
-    public,
-    max-age=31536000'''
-    Access-Control-Allow-Origin = "*"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "payment=(), usb=()"
+    # CSP allowing cross-origin resources for Netlify deployments
+    Content-Security-Policy = "default-src 'self' *.netlify.app https://app.netlify.com; script-src 'self' *.netlify.app; style-src 'self' *.netlify.app 'unsafe-inline'; font-src 'self' *.netlify.app data: https:; img-src 'self' *.netlify.app https: data:; connect-src 'self' *.netlify.app https:; manifest-src 'self' *.netlify.app; object-src 'none'; base-uri 'self' *.netlify.app; frame-src 'self' *.netlify.app https://app.netlify.com; frame-ancestors 'none'; form-action 'self';"
+    Cache-Control = "public, max-age=31536000"

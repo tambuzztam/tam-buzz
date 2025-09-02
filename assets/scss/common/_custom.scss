@@ -8,7 +8,7 @@
   --viewport-height: 100vh;
 }
 
-/* Animation for hero section fadeIn effect */
+/* Animation for hero section fadeIn effect - force rebuild */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -58,8 +58,11 @@ div.message {
     color: #b22222;
     display: inline !important;
     padding-inline-start: 2%;
-    animation: fadeIn 2s ease-in 1;
-    opacity: 1;
+    opacity: 0;
+  }
+
+  &.animate h1.invitation {
+    animation: fadeIn 2s ease-in forwards;
   }
 
   h1.subject {
