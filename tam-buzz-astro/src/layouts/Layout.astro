@@ -4,7 +4,10 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Philosophical counseling for people facing meaningful decisions" } = Astro.props;
+const {
+  title,
+  description = "Philosophical counseling for people facing meaningful decisions",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +19,17 @@ const { title, description = "Philosophical counseling for people facing meaning
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body class="bg-gray-900 text-gray-100 antialiased">
+  <body class="bg-gray-900 text-gray-100 antialiased relative">
+    <!-- Background Image -->
+    <div
+      class="fixed inset-0 -z-10 opacity-50"
+      style="background-image: url('/inverse_coldmountain.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"
+    >
+    </div>
+    <div
+      class="fixed inset-0 -z-10 bg-gradient-to-b from-gray-900/40 via-gray-900/60 to-gray-900/70"
+    >
+    </div>
     <slot />
   </body>
 </html>
@@ -24,5 +37,18 @@ const { title, description = "Philosophical counseling for people facing meaning
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-snap-align: start;
+  }
+
+  /* Ensure smooth scrolling works across browsers */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 </style>
