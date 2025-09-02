@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        div.message {
+            opacity: 0.4;
+            padding-bottom: 54px;
+        }
+        
+        div.message.hidden {
+            display: none;
+        }
+        
+        div.message h1.invitation {
+            color: #b22222;
+            display: inline !important;
+            padding-inline-start: 2%;
+            opacity: 0;
+        }
+        
+        div.message.animate h1.invitation {
+            animation: fadeIn 2s ease-in forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center title hidden message">
+        <h1 class="subject">Prize</h1>
+        <h1 class="invitation">the problem</h1>
+    </div>
+    <div class="text-center title hidden message">
+        <h1 class="subject">Treasure</h1>
+        <h1 class="invitation">the mind</h1>
+    </div>
+
+    <script>
+        console.log('Script loaded');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded fired');
+            
+            let messages = document.querySelectorAll('.message');
+            console.log('Found messages:', messages.length);
+            
+            if (messages.length > 0) {
+                messages.forEach(msg => msg.classList.add('hidden'));
+                
+                let randomIndex = Math.floor(Math.random() * messages.length);
+                let selectedDiv = messages[randomIndex];
+                
+                selectedDiv.classList.remove('hidden');
+                console.log('Selected div:', selectedDiv);
+                console.log('Div classes before animation:', selectedDiv.classList.toString());
+                
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        selectedDiv.classList.add('animate');
+                        console.log('Added animate class. Div classes now:', selectedDiv.classList.toString());
+                    });
+                });
+            }
+        });
+        
+        // Also try without DOMContentLoaded to see if that's the issue
+        setTimeout(() => {
+            console.log('Timeout fallback executing');
+            let messages = document.querySelectorAll('.message');
+            console.log('Timeout - Found messages:', messages.length);
+            
+            if (messages.length > 0) {
+                let selectedDiv = messages[0];
+                selectedDiv.classList.remove('hidden');
+                selectedDiv.classList.add('animate');
+                console.log('Timeout - Added animate to first message');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
