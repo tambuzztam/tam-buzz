@@ -114,3 +114,32 @@ svg.icon.icon-tabler.icon-tabler-menu {
 .blog-header {
   display: none;
 }
+
+// Fully transparent navbar to show background image through
+[data-bs-theme="dark"] .navbar,
+.navbar,
+.navbar-expand-lg,
+header.navbar,
+.header {
+  background: transparent !important; // Fully transparent to show background image
+  backdrop-filter: blur(3px); // Light blur for readability without blocking background
+  -webkit-backdrop-filter: blur(3px); // Safari support
+  border-bottom: none !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 10; // Ensure navbar is above background but content is still readable
+}
+
+// Ensure navbar content is visible against dark background
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-text,
+.navbar .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+// Hover effects for navbar links
+.navbar .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
