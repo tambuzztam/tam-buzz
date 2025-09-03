@@ -1,33 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tam - Philosophical Counseling">
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <section
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative"
+  >
     <div class="max-w-6xl mx-auto text-center">
       <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
         When life's big questions
         <br class="hidden sm:block" />
         won't let you sleep
       </h1>
-      <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto">
+      <p
+        class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto"
+      >
         Philosophical counseling for people facing meaningful decisions
       </p>
-      <a 
-        href="#problem" 
-        class="inline-flex items-center px-8 py-4 sm:px-12 sm:py-6 bg-blue-500 hover:bg-blue-600 text-white text-lg sm:text-xl font-semibold rounded-lg transition-colors group"
+      <a
+        href="https://calendly.com/tam-benp/philosophical-counseling"
+        class="inline-block px-8 py-4 sm:px-12 sm:py-6 bg-blue-500 hover:bg-blue-600 text-white text-lg sm:text-xl font-semibold rounded-lg transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Learn How It Works
-        <svg class="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+        Let's talk
       </a>
+
+      <!-- Subtle navigation hint -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#problem"
+          class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+        >
+          <span class="text-sm mb-2 opacity-75">Learn how it works</span>
+          <svg
+            class="w-6 h-6 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Problem Section -->
-  <section id="problem" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+  <section
+    id="problem"
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 border-t border-gray-800 relative"
+  >
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16">
         What brings people to philosophical counseling?
@@ -36,94 +64,263 @@ import Layout from '../layouts/Layout.astro';
         <div class="space-y-6">
           <div class="border-l-4 border-blue-400 pl-6">
             <h3 class="text-xl font-semibold mb-3">Identity Crises</h3>
-            <p class="text-gray-300">Career transitions that feel like questioning who you fundamentally are</p>
+            <p class="text-gray-300">
+              Career transitions that feel like questioning who you
+              fundamentally are
+            </p>
           </div>
           <div class="border-l-4 border-amber-400 pl-6">
             <h3 class="text-xl font-semibold mb-3">Value Conflicts</h3>
-            <p class="text-gray-300">Relationship decisions that touch your core beliefs about how to live</p>
+            <p class="text-gray-300">
+              Relationship decisions that touch your core beliefs about how to
+              live
+            </p>
           </div>
         </div>
         <div class="space-y-6">
           <div class="border-l-4 border-emerald-400 pl-6">
             <h3 class="text-xl font-semibold mb-3">Existential Questions</h3>
-            <p class="text-gray-300">Success that feels hollow, leaving you wondering "What's the point?"</p>
+            <p class="text-gray-300">
+              Success that feels hollow, leaving you wondering "What's the
+              point?"
+            </p>
           </div>
           <div class="border-l-4 border-purple-400 pl-6">
             <h3 class="text-xl font-semibold mb-3">Life Transitions</h3>
-            <p class="text-gray-300">Feeling stuck between who you are and who you think you "should" be</p>
+            <p class="text-gray-300">
+              Feeling stuck between who you are and who you think you "should"
+              be
+            </p>
           </div>
         </div>
+      </div>
+
+      <!-- Let's talk CTA -->
+      <div class="mt-12 text-center">
+        <a
+          href="https://calendly.com/tam-benp/philosophical-counseling"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Let's talk
+        </a>
+      </div>
+
+      <!-- Subtle navigation hint -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#solution"
+          class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+        >
+          <span class="text-sm mb-2 opacity-75">How philosophy helps</span>
+          <svg
+            class="w-6 h-6 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Solution Section -->
-  <section id="solution" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+  <section
+    id="solution"
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-800/50 relative"
+  >
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16">
         How philosophy helps differently
       </h2>
       <div class="prose prose-lg sm:prose-xl prose-invert max-w-none">
         <p class="text-xl text-center mb-12 text-gray-300">
-          Unlike therapy (focused on healing) or coaching (focused on goals), 
+          Unlike therapy (focused on healing) or coaching (focused on goals),
           philosophical counseling helps you:
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          <div
+            class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-4">Clarify Values</h3>
-          <p class="text-gray-300">Through structured dialogue, uncover what truly matters to you</p>
+          <p class="text-gray-300">
+            Through structured dialogue, uncover what truly matters to you
+          </p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          <div
+            class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-amber-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-4">Examine Assumptions</h3>
           <p class="text-gray-300">Question beliefs you didn't know you had</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+          <div
+            class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-emerald-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-4">Find Meaning</h3>
-          <p class="text-gray-300">Develop frameworks for navigating complex decisions</p>
+          <p class="text-gray-300">
+            Develop frameworks for navigating complex decisions
+          </p>
         </div>
+      </div>
+
+      <!-- Let's talk CTA -->
+      <div class="mt-8 text-center">
+        <a
+          href="https://calendly.com/tam-benp/philosophical-counseling"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Let's talk
+        </a>
+      </div>
+
+      <!-- Subtle navigation hint -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#about"
+          class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+        >
+          <span class="text-sm mb-2 opacity-75">About Tam</span>
+          <svg
+            class="w-6 h-6 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+  <section
+    id="about"
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative"
+  >
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
-        About Tam
-      </h2>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">About Tam</h2>
       <div class="prose prose-lg sm:prose-xl prose-invert max-w-none mb-12">
         <p class="text-xl text-gray-300 mb-6">
-          A special brand of philosophical counseling for individuals and groups.
+          A special brand of philosophical counseling for individuals and
+          groups.
         </p>
         <p class="text-lg text-gray-400 mb-8">
-          Certified by the <a href="https://appa.edu/about/" class="text-blue-400 hover:text-blue-300 underline">APPA</a> (American Philosophical Practitioners Association).
+          Certified by the <a
+            href="https://appa.edu/about/"
+            class="text-blue-400 hover:text-blue-300 underline">APPA</a
+          > (American Philosophical Practitioners Association).
         </p>
         <blockquote class="text-2xl font-medium italic border-none">
           "The most profound insights come through conversation"
         </blockquote>
       </div>
+
+      <!-- Let's talk CTA -->
+      <div class="mt-8 text-center">
+        <a
+          href="https://calendly.com/tam-benp/philosophical-counseling"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Let's talk
+        </a>
+      </div>
+
+      <!-- Subtle navigation hint -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#process"
+          class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+        >
+          <span class="text-sm mb-2 opacity-75">What to expect</span>
+          <svg
+            class="w-6 h-6 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Process Section -->
-  <section id="process" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+  <section
+    id="process"
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-800/50 relative"
+  >
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-16">
         What to expect
@@ -131,29 +328,41 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-left">
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+            <div
+              class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+            >
               <span class="text-sm font-bold">1</span>
             </div>
             <div>
               <h3 class="text-xl font-semibold mb-2">50-minute conversation</h3>
-              <p class="text-gray-300">Guided philosophical dialogue, not therapy or coaching</p>
+              <p class="text-gray-300">
+                Guided philosophical dialogue, not therapy or coaching
+              </p>
             </div>
           </div>
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+            <div
+              class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+            >
               <span class="text-sm font-bold">2</span>
             </div>
             <div>
               <h3 class="text-xl font-semibold mb-2">Zoom or in-person</h3>
-              <p class="text-gray-300">You can engage from anywhere that feels comfortable</p>
+              <p class="text-gray-300">
+                You can engage from anywhere that feels comfortable
+              </p>
             </div>
           </div>
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+            <div
+              class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+            >
               <span class="text-sm font-bold">3</span>
             </div>
             <div>
-              <h3 class="text-xl font-semibold mb-2">No homework, no diagnosis</h3>
+              <h3 class="text-xl font-semibold mb-2">
+                No homework, no diagnosis
+              </h3>
               <p class="text-gray-300">Just deep thinking together</p>
             </div>
           </div>
@@ -161,18 +370,57 @@ import Layout from '../layouts/Layout.astro';
         <div class="bg-gray-900 rounded-lg p-8">
           <h3 class="text-2xl font-semibold mb-4">Your Session</h3>
           <p class="text-gray-300 mb-6">
-            A space of freedom and safety, where all thoughts are welcome and exploration is encouraged.
+            A space of freedom and safety, where all thoughts are welcome and
+            exploration is encouraged.
           </p>
           <p class="text-gray-400">
-            Through guided philosophical conversation, we'll venture together into the questions and themes that resonate with you.
+            Through guided philosophical conversation, we'll venture together
+            into the questions and themes that resonate with you.
           </p>
         </div>
+      </div>
+
+      <!-- Let's talk CTA -->
+      <div class="mt-8 text-center">
+        <a
+          href="https://calendly.com/tam-benp/philosophical-counseling"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Let's talk
+        </a>
+      </div>
+
+      <!-- Subtle navigation hint -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#cta"
+          class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+        >
+          <span class="text-sm mb-2 opacity-75">Ready to start?</span>
+          <svg
+            class="w-6 h-6 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section id="cta" class="py-20 px-4 sm:px-6 lg:px-8">
+  <section
+    id="cta"
+    class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative"
+  >
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl sm:text-4xl font-bold mb-8">
         Ready to explore your questions?
@@ -180,8 +428,8 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xl text-gray-300 mb-12">
         Schedule your philosophical counseling session
       </p>
-      <a 
-        href="https://calendly.com/tam-benp/philosophical-counseling" 
+      <a
+        href="https://calendly.com/tam-benp/philosophical-counseling"
         class="inline-block px-12 py-6 bg-blue-500 hover:bg-blue-600 text-white text-xl font-semibold rounded-lg transition-colors mb-8"
         target="_blank"
         rel="noopener noreferrer"
@@ -189,7 +437,10 @@ import Layout from '../layouts/Layout.astro';
         Schedule Your Session
       </a>
       <p class="text-gray-400">
-        Questions? Email <a href="mailto:info@tam.buzz" class="text-blue-400 hover:text-blue-300">info@tam.buzz</a>
+        Questions? Email <a
+          href="mailto:info@tam.buzz"
+          class="text-blue-400 hover:text-blue-300">info@tam.buzz</a
+        >
       </p>
     </div>
   </section>
@@ -203,13 +454,26 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xl text-gray-300 mb-16">
         Every meaningful question invites both elevation and excavation
       </p>
-      
+
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <a href="/heights" class="group block">
-          <div class="border border-blue-400 rounded-lg p-8 hover:bg-blue-400/10 transition-colors">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-blue-400 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          <div
+            class="border border-blue-400 rounded-lg p-8 hover:bg-blue-400/10 transition-colors"
+          >
+            <div
+              class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"
+            >
+              <svg
+                class="w-8 h-8 text-blue-400 group-hover:-translate-y-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
               </svg>
             </div>
             <h3 class="text-2xl font-semibold mb-4">The Heights</h3>
@@ -221,12 +485,25 @@ import Layout from '../layouts/Layout.astro';
             </p>
           </div>
         </a>
-        
+
         <a href="/depths" class="group block">
-          <div class="border border-amber-400 rounded-lg p-8 hover:bg-amber-400/10 transition-colors">
-            <div class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-amber-400 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          <div
+            class="border border-amber-400 rounded-lg p-8 hover:bg-amber-400/10 transition-colors"
+          >
+            <div
+              class="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"
+            >
+              <svg
+                class="w-8 h-8 text-amber-400 group-hover:translate-y-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
               </svg>
             </div>
             <h3 class="text-2xl font-semibold mb-4">The Depths</h3>
