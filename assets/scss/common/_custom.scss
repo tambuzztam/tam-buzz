@@ -115,12 +115,12 @@ svg.icon.icon-tabler.icon-tabler-menu {
   display: none;
 }
 
-// Transparent navbar with darker background
+// Transparent navbar with lighter background
 .navbar,
 .navbar-expand-lg,
 header.navbar,
 .header {
-  background-color: rgba(0, 0, 0, 0.3) !important; // Semi-transparent dark background
+  background-color: rgba(0, 0, 0, 0.15) !important; // Lighter semi-transparent dark background
   backdrop-filter: blur(5px); // Add blur effect for modern browsers
   -webkit-backdrop-filter: blur(5px); // Safari support
   border-bottom: none !important;
