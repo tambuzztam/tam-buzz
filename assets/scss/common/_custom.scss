@@ -115,17 +115,19 @@ svg.icon.icon-tabler.icon-tabler-menu {
   display: none;
 }
 
-// Transparent navbar with lighter background - override dark theme
+// Fully transparent navbar to show background image through
 [data-bs-theme="dark"] .navbar,
 .navbar,
 .navbar-expand-lg,
 header.navbar,
 .header {
-  background-color: rgba(255, 255, 255, 0.1) !important; // Very light transparent background
-  backdrop-filter: blur(8px); // Increase blur for better effect
-  -webkit-backdrop-filter: blur(8px); // Safari support
+  background: transparent !important; // Fully transparent to show background image
+  backdrop-filter: blur(3px); // Light blur for readability without blocking background
+  -webkit-backdrop-filter: blur(3px); // Safari support
   border-bottom: none !important;
   box-shadow: none !important;
+  position: relative;
+  z-index: 10; // Ensure navbar is above background but content is still readable
 }
 
 // Ensure navbar content is visible against dark background
