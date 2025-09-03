@@ -47,4 +47,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 ### Contact Us:
 
-If you have any questions about this Privacy Policy, please contact us here: [info@tam.buzz](mailto:info@tam.buzz).
+If you have any questions about this Privacy Policy, please contact us at: [info@tam.buzz](mailto:info@tam.buzz)
