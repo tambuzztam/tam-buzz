@@ -114,3 +114,29 @@ svg.icon.icon-tabler.icon-tabler-menu {
 .blog-header {
   display: none;
 }
+
+// Transparent navbar with darker background
+.navbar,
+.navbar-expand-lg,
+header.navbar,
+.header {
+  background-color: rgba(0, 0, 0, 0.3) !important; // Semi-transparent dark background
+  backdrop-filter: blur(5px); // Add blur effect for modern browsers
+  -webkit-backdrop-filter: blur(5px); // Safari support
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+// Ensure navbar content is visible against dark background
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-text,
+.navbar .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+// Hover effects for navbar links
+.navbar .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
