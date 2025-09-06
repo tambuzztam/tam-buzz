@@ -4,10 +4,10 @@ A modern philosophical counseling website built with Astro and Tailwind CSS, fea
 
 ## Architecture
 
-* **Landing Page**: Single-page scroll design with conversion-focused sections
-* **The Heights**: Aspirational philosophical content (meaning, purpose, vision)
-* **The Depths**: Foundational content (assumptions, beliefs, root examination)
-* **Obsidian Integration**: Content sourced from your Obsidian vault
+- **Landing Page**: Single-page scroll design with conversion-focused sections
+- **The Heights**: Aspirational philosophical content (meaning, purpose, vision)
+- **The Depths**: Foundational content (assumptions, beliefs, root examination)
+- **Obsidian Integration**: Content sourced from your Obsidian vault
 
 ## Development Setup
 
@@ -80,27 +80,27 @@ Regular markdown content with Obsidian features like [[wikilinks]] and anchors.
 
 ## Site Structure
 
-* `/` - Landing page with conversion flow
-* `/heights` - Overview of aspirational content
-* `/heights/[slug]` - Individual heights articles
-* `/depths` - Overview of foundational content
-* `/depths/[slug]` - Individual depths articles
+- `/` - Landing page with conversion flow
+- `/heights` - Overview of aspirational content
+- `/heights/[slug]` - Individual heights articles
+- `/depths` - Overview of foundational content
+- `/depths/[slug]` - Individual depths articles
 
 ## Design System
 
-* **Dark theme** with gray-900 background
-* **Blue accent** (#60a5fa) for Heights content
-* **Amber accent** (#f59e0b) for Depths content
-* **Responsive design** mobile-first with Tailwind breakpoints
-* **Typography** optimized for philosophical content reading
+- **Dark theme** with gray-900 background
+- **Blue accent** (#60a5fa) for Heights content
+- **Amber accent** (#f59e0b) for Depths content
+- **Responsive design** mobile-first with Tailwind breakpoints
+- **Typography** optimized for philosophical content reading
 
 ## Mountain Metaphor
 
 The site uses the metaphor of Tam as a mountain:
 
-* **The Heights**: Gaining perspective, seeing the bigger picture
-* **The Depths**: Examining foundations, exploring what lies beneath
-* **Progressive disclosure**: Users choose their path of exploration
+- **The Heights**: Gaining perspective, seeing the bigger picture
+- **The Depths**: Examining foundations, exploring what lies beneath
+- **Progressive disclosure**: Users choose their path of exploration
 
 ## Deployment
 
