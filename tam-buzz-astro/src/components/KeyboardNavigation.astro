@@ -1,0 +1,85 @@
+---
+
+---
+
+<script>
+  // Keyboard navigation for down arrow key
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get all sections with IDs (navigable sections)
+    const sections = Array.from(document.querySelectorAll("section[id]"));
+
+    // Add the first hero section (no ID) to the beginning
+    const heroSection = document.querySelector("section");
+    if (heroSection && !heroSection.id) {
+      sections.unshift(heroSection);
+    }
+
+    let currentSectionIndex = 0;
+
+    // Function to get the currently visible section
+    function getCurrentSection() {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const rect = section.getBoundingClientRect();
+        const sectionTop = window.scrollY + rect.top;
+        const sectionBottom = sectionTop + rect.height;
+
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+          return i;
+        }
+      }
+      return 0;
+    }
+
+    // Function to scroll to the next section
+    function scrollToNextSection() {
+      currentSectionIndex = getCurrentSection();
+      const nextIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
+
+      if (nextIndex > currentSectionIndex) {
+        sections[nextIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+
+    // Function to scroll to the previous section
+    function scrollToPreviousSection() {
+      currentSectionIndex = getCurrentSection();
+      const prevIndex = Math.max(currentSectionIndex - 1, 0);
+
+      if (prevIndex < currentSectionIndex) {
+        sections[prevIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+
+    // Handle keyboard events
+    document.addEventListener("keydown", (event) => {
+      // Check for down arrow key (key code 40 or 'ArrowDown')
+      if (event.key === "ArrowDown" || event.keyCode === 40) {
+        event.preventDefault(); // Prevent default scrolling behavior
+        scrollToNextSection();
+      }
+      // Check for up arrow key (key code 38 or 'ArrowUp')
+      else if (event.key === "ArrowUp" || event.keyCode === 38) {
+        event.preventDefault(); // Prevent default scrolling behavior
+        scrollToPreviousSection();
+      }
+    });
+
+    // Update current section on scroll (for better tracking)
+    let scrollTimeout;
+    window.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        currentSectionIndex = getCurrentSection();
+      }, 100);
+    });
+  });
+</script>

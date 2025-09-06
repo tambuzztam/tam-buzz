@@ -1,0 +1,80 @@
+---
+import CTAButton from "../ui/CTAButton.astro";
+import NavigationHint from "../ui/NavigationHint.astro";
+---
+
+<!-- Process Section -->
+<section
+  id="process"
+  class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-800/50 relative"
+>
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-16">
+      What to expect
+    </h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6 text-left">
+        <div class="flex items-start space-x-4">
+          <div
+            class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+          >
+            <span class="text-sm font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Philosophic conversation</h3>
+            <p class="text-gray-300">
+              60 minutes focused on what's truly important to you— not
+              philosophy, but your philosophy of living
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div
+            class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+          >
+            <span class="text-sm font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">You do the talking</h3>
+            <p class="text-gray-300">
+              I listen for what's already growing in you—helping you hear what's
+              important so you can respond with more of yourself
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div
+            class="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mt-1"
+          >
+            <span class="text-sm font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Growth, not healing</h3>
+            <p class="text-gray-300">
+              You're not broken—you're growing. We honor that becoming
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-900 rounded-lg p-8">
+        <h3 class="text-2xl font-semibold mb-4">The Experience</h3>
+        <p class="text-gray-300 mb-6">
+          Meet via Zoom or in-person. No homework, no diagnosis, no fixing. Just
+          treasuring your mind through deep conversation.
+        </p>
+        <p class="text-gray-400">
+          When you hear what's truly important, you naturally respond by
+          growing. The conversation creates space for this natural response to
+          unfold.
+        </p>
+      </div>
+    </div>
+
+    <!-- Let's talk CTA -->
+    <div class="mt-8 text-center">
+      <CTAButton variant="secondary" />
+    </div>
+
+    <NavigationHint href="#cta" text="Ready to start?" />
+  </div>
+</section>
