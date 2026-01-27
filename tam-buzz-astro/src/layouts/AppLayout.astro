@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="text-gray-100 antialiased relative">
+    <!-- App-specific gradient background -->
+    <div
+      class="fixed inset-0 -z-10"
+      style="background: linear-gradient(135deg, #000000 0%, #0f0f0f 40%, #1a1a1a 70%, #1a1f1a 100%);"
+    >
+    </div>
+    <!-- Mountain background overlay at low opacity -->
+    <div
+      class="fixed inset-0 -z-10"
+      style="
+        background-image: url('/inverse_coldmountain.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+        opacity: 0.03;
+      "
+    >
+    </div>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-snap-align: start;
+  }
+
+  /* Ensure smooth scrolling works across browsers */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+</style>

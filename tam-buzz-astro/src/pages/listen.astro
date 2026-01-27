@@ -1,49 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import AppLayout from '../layouts/AppLayout.astro';
 import CTAButton from '../components/ui/CTAButton.astro';
 ---
 
-<Layout 
+<AppLayout 
   title="Tam Listen - Audio Player for Power Listeners"
   description="An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio."
 >
+  
   <main>
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center px-6 py-20">
       <div class="max-w-4xl mx-auto text-center">
         <div class="mb-8">
-          <!-- App Icon Placeholder -->
-          <div class="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
-            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-            </svg>
+          <!-- App Icon -->
+          <div class="w-24 h-24 mx-auto mb-8 shadow-2xl">
+            <img 
+              src="/tam-listen-icon.png" 
+              alt="Tam Listen app icon" 
+              class="w-full h-full rounded-2xl"
+            />
           </div>
         </div>
         
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent">
+        <h1 class="text-6xl md:text-8xl font-black mb-6" style="
+          background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 40%, #97A859 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: -0.02em;
+          text-shadow: 0 2px 20px rgba(206, 218, 142, 0.2);
+        ">
           Tam Listen
         </h1>
         
-        <p class="text-xl md:text-2xl text-gray-300 mb-4 font-light">
+        <p class="text-2xl md:text-3xl mb-6 font-medium" style="
+          color: #CEDA8E;
+          text-shadow: 0 1px 10px rgba(206, 218, 142, 0.15);
+          letter-spacing: -0.01em;
+        ">
           An audio player for power listeners.
         </p>
         
-        <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Own your files. Manage your library. Listen to everything — even video — as audio.
+        <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed font-light" style="
+          text-shadow: 0 1px 8px rgba(255, 255, 255, 0.1);
+        ">
+          Local-first. Bring your files. Listen to everything.
         </p>
 
-        <!-- iPhone Mockup Placeholder -->
+        <!-- iPhone Mockup -->
         <div class="mb-12">
-          <div class="w-64 h-96 mx-auto bg-black rounded-3xl p-2 shadow-2xl">
-            <div class="w-full h-full bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl flex items-center justify-center">
+          <div class="w-64 h-96 mx-auto bg-black rounded-3xl p-2" style="
+            box-shadow: 
+              0 25px 50px rgba(0, 0, 0, 0.6),
+              0 10px 30px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-full h-full rounded-2xl flex items-center justify-center" style="
+              background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+              border: 1px solid rgba(206, 218, 142, 0.1);
+            ">
               <div class="text-center p-6">
-                <div class="w-12 h-12 mx-auto mb-4 bg-blue-500 rounded-xl flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center" style="
+                  background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+                  box-shadow: 0 8px 25px rgba(151, 168, 89, 0.3);
+                ">
+                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </div>
-                <div class="text-white text-sm mb-2">Now Playing</div>
-                <div class="text-gray-300 text-xs">Tam Listen Interface</div>
+                <div class="text-white text-base mb-2 font-medium" style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Now Playing</div>
+                <div class="text-gray-400 text-sm font-light">Tam Listen Interface</div>
               </div>
             </div>
           </div>
@@ -53,9 +80,20 @@ import CTAButton from '../components/ui/CTAButton.astro';
         <div class="mb-8">
           <a 
             href="#" 
-            class="inline-flex items-center px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium text-lg shadow-lg"
+            class="inline-flex items-center px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+            style="
+              background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+              border: 2px solid #97A859;
+              color: white;
+              box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 5px 15px rgba(151, 168, 89, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            "
+            onmouseover="this.style.borderColor='#CEDA8E'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 8px 20px rgba(206,218,142,0.3), inset 0 1px 0 rgba(255,255,255,0.15)'"
+            onmouseout="this.style.borderColor='#97A859'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3), 0 5px 15px rgba(151,168,89,0.2), inset 0 1px 0 rgba(255,255,255,0.1)'"
           >
-            <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-8 h-8 mr-4" viewBox="0 0 24 24" fill="currentColor" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             Download on the App Store
@@ -68,48 +106,91 @@ import CTAButton from '../components/ui/CTAButton.astro';
     <section class="py-20 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Features</h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h2 class="text-4xl md:text-6xl font-black mb-6" style="
+            background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 70%, #97A859 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 15px rgba(206, 218, 142, 0.15);
+          ">Features</h2>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto font-light" style="
+            color: #CEDA8E;
+            text-shadow: 0 1px 8px rgba(206, 218, 142, 0.1);
+          ">
             Tam Listen is built for people who take listening seriously.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Your files, your way -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold mb-4 text-white">Your files, your way</h3>
-            <p class="text-gray-300 leading-relaxed">
-              Import from your device, Dropbox, or Google Drive. Once a file has presence in the app, you can offload it to free up space while keeping your progress and history. Bring it back when you're ready to continue. No subscriptions, no sync headaches, no algorithms deciding what's next.
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Your files, your way</h3>
+            <p class="text-gray-200 leading-relaxed font-light" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+              Import from your device, Dropbox, or Google Drive. Offload files to free up space while keeping your progress and history. Bring them back when you're ready. Everything stays local, under your control.
             </p>
           </div>
 
           <!-- Video as audio -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold mb-4 text-white">Video as audio</h3>
-            <p class="text-gray-300 leading-relaxed">
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Video as audio</h3>
+            <p class="text-gray-200 leading-relaxed font-light" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
               Lectures, talks, interviews — much of the best spoken content lives in video files. Tam Listen plays them as audio, so you can listen without the screen.
             </p>
           </div>
 
           <!-- CarPlay ready -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold mb-4 text-white">CarPlay ready</h3>
-            <p class="text-gray-300 leading-relaxed mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">CarPlay ready</h3>
+            <p class="text-gray-200 leading-relaxed font-light mb-6" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
               Full CarPlay support for long drives and daily commutes.
             </p>
             <!-- CarPlay Mockup -->
@@ -119,32 +200,54 @@ import CTAButton from '../components/ui/CTAButton.astro';
           </div>
 
           <!-- Live Activities -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold mb-4 text-white">Live Activities</h3>
-            <p class="text-gray-300 leading-relaxed mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Live Activities</h3>
+            <p class="text-gray-200 leading-relaxed font-light mb-6" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
               Keep your current listen visible on your Lock Screen and Dynamic Island.
             </p>
             <!-- Live Activity Mockup -->
             <div class="w-full h-16 bg-black rounded-2xl flex items-center justify-between px-4">
               <div class="text-white text-xs">Now Playing</div>
-              <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+              <div class="w-8 h-8 rounded-full" style="background-color: #97A859;"></div>
             </div>
           </div>
 
           <!-- Listening projects -->
-          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 md:col-span-2">
-            <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105 md:col-span-2" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold mb-4 text-white">Listening projects</h3>
-            <p class="text-gray-300 leading-relaxed mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Listening projects</h3>
+            <p class="text-gray-200 leading-relaxed font-light mb-6" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
               Researching a subject? Bring together files and folders from across your library into a single project — lectures, interviews, audiobooks, whatever's relevant — and work through it over time.
             </p>
             <!-- Project View Mockup -->
@@ -170,7 +273,14 @@ import CTAButton from '../components/ui/CTAButton.astro';
     <!-- About Section -->
     <section class="py-20 px-6">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-white">About</h2>
+        <h2 class="text-4xl md:text-6xl font-black mb-12 text-center" style="
+          background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 70%, #97A859 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: -0.02em;
+          text-shadow: 0 2px 15px rgba(206, 218, 142, 0.15);
+        ">About</h2>
         <div class="prose prose-lg prose-invert max-w-none">
           <p class="text-xl text-gray-300 leading-relaxed mb-8">
             Most apps that play files are designed for music or movies. You start a song or an album from the beginning. You watch a film right through. That's not how long-form spoken content works.
@@ -188,11 +298,18 @@ import CTAButton from '../components/ui/CTAButton.astro';
     <!-- Support Section -->
     <section class="py-20 px-6">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Support</h2>
+        <h2 class="text-3xl md:text-5xl font-black mb-8" style="
+          background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 70%, #97A859 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: -0.02em;
+          text-shadow: 0 2px 15px rgba(206, 218, 142, 0.15);
+        ">Support</h2>
         <p class="text-lg text-gray-300 mb-8">
           Questions or issues? Reach us at 
-          <a href="mailto:support@tambuzztam.com" class="text-blue-400 hover:text-blue-300 transition-colors">
-            support@tambuzztam.com
+          <a href="mailto:info@tam.buzz" class="transition-colors" style="color: #CEDA8E;" onmouseover="this.style.color='#97A859'" onmouseout="this.style.color='#CEDA8E'">
+            info@tam.buzz
           </a>
         </p>
       </div>
@@ -202,11 +319,11 @@ import CTAButton from '../components/ui/CTAButton.astro';
     <footer class="py-12 px-6 border-t border-white/10">
       <div class="max-w-4xl mx-auto text-center">
         <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400">
-          <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/listen/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
           <span class="hidden sm:inline">·</span>
           <span>© tambuzztam LLC</span>
         </div>
       </div>
     </footer>
   </main>
-</Layout>
+</AppLayout>

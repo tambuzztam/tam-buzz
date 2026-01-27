@@ -1,0 +1,88 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+---
+
+<AppLayout 
+  title="Privacy Policy - Tam Listen"
+  description="Privacy policy for Tam Listen. A local-first audio player that keeps your data on your device."
+>
+  <main class="py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-black mb-8" style="
+        background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 70%, #97A859 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
+      ">Privacy Policy</h1>
+      
+      <p class="text-gray-400 mb-12">Effective date: January 27, 2026</p>
+      
+      <div class="prose prose-lg prose-invert max-w-none">
+        <p class="text-xl text-gray-300 leading-relaxed mb-8">
+          Tam Listen is built by tambuzztam LLC. This policy describes how we handle your data.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4" style="color: #CEDA8E;">The short version</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          Tam Listen is a local-first app. Your files, listening history, and progress stay on your device. We don't have accounts, we don't track you, and we can't see your library.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Data stored on your device</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          All of your data — imported files, listening progress, projects — is stored locally on your device. We do not have access to it.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Cloud services</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          If you choose to import files from Dropbox or Google Drive, the app connects directly to those services using their official APIs. Your credentials are handled by Dropbox and Google, not by us. We do not store your cloud service tokens on our servers.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Analytics</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          We do not collect any analytics or usage data. We use Apple's built-in App Analytics, which provides us with aggregate, anonymous information like download counts and crash reports. This data cannot be used to identify you. You can opt out of sharing this data in your device's privacy settings.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Data we don't collect</h2>
+        <ul class="text-gray-300 leading-relaxed mb-8 list-none pl-0 space-y-2">
+          <li class="flex items-center">
+            <span class="mr-3" style="color: #97A859;">✓</span> No personal information
+          </li>
+          <li class="flex items-center">
+            <span class="mr-3" style="color: #97A859;">✓</span> No account registration
+          </li>
+          <li class="flex items-center">
+            <span class="mr-3" style="color: #97A859;">✓</span> No tracking across apps or websites
+          </li>
+          <li class="flex items-center">
+            <span class="mr-3" style="color: #97A859;">✓</span> No advertising
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Support</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          If you contact us for support, we'll receive your email address and message. We use this only to respond to you and don't add you to any marketing lists.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Changes to this policy</h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          We may update this policy from time to time. We'll post changes here, and the effective date will reflect when changes were made.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">Contact</h2>
+        <p class="text-gray-300 leading-relaxed">
+          Questions? Reach us at <a href="mailto:info@tam.buzz" class="transition-colors" style="color: #CEDA8E;" onmouseover="this.style.color='#97A859'" onmouseout="this.style.color='#CEDA8E'">info@tam.buzz</a>
+        </p>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-white/10">
+        <a href="/listen" class="inline-flex items-center transition-colors" style="color: #CEDA8E;" onmouseover="this.style.color='#97A859'" onmouseout="this.style.color='#CEDA8E'">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          Back to Tam Listen
+        </a>
+      </div>
+    </div>
+  </main>
+</AppLayout>
