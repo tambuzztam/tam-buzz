@@ -141,9 +141,9 @@ import CTAButton from '../components/ui/CTAButton.astro';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Your files, your way</h3>
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">File-first</h3>
             <p class="text-gray-200 leading-relaxed font-light" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-              Import from your device, Dropbox, or Google Drive. Offload files to free up space while keeping your progress and history. Bring them back when you're ready. Everything stays local, under your control.
+              Your files come first — the app is here to serve them. Import from your device, Dropbox, or Google Drive. Offload to free up space while keeping your progress. Everything stays local, under your control.
             </p>
           </div>
 
@@ -228,8 +228,32 @@ import CTAButton from '../components/ui/CTAButton.astro';
             </div>
           </div>
 
+          <!-- Music collections -->
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          ">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            ">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Music collections</h3>
+            <p class="text-gray-200 leading-relaxed font-light" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+              Collect live shows, concert recordings, bootlegs? Mark files as music and find them in the Music tab. The player adapts — scrub and skip tracks instead of skip-back-by-seconds. No progress tracking, just listening.
+            </p>
+          </div>
+
           <!-- Listening projects -->
-          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105 md:col-span-2" style="
+          <div class="rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="
             background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
             border: 1px solid rgba(206, 218, 142, 0.15);
             backdrop-filter: blur(20px);
@@ -247,24 +271,9 @@ import CTAButton from '../components/ui/CTAButton.astro';
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4 text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Listening projects</h3>
-            <p class="text-gray-200 leading-relaxed font-light mb-6" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-              Researching a subject? Bring together files and folders from across your library into a single project — lectures, interviews, audiobooks, whatever's relevant — and work through it over time.
+            <p class="text-gray-200 leading-relaxed font-light" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+              Researching a subject? Bring together files from across your library into a single project — lectures, interviews, audiobooks — and work through it over time.
             </p>
-            <!-- Project View Mockup -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div class="bg-gray-800 rounded-lg p-3 text-center">
-                <div class="text-white text-xs">Lecture 1</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-3 text-center">
-                <div class="text-white text-xs">Interview</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-3 text-center">
-                <div class="text-white text-xs">Audiobook</div>
-              </div>
-              <div class="bg-gray-800 rounded-lg p-3 text-center">
-                <div class="text-white text-xs">Podcast</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -283,13 +292,13 @@ import CTAButton from '../components/ui/CTAButton.astro';
         ">About</h2>
         <div class="prose prose-lg prose-invert max-w-none">
           <p class="text-xl text-gray-300 leading-relaxed mb-8">
-            Most apps that play files are designed for music or movies. You start a song or an album from the beginning. You watch a film right through. That's not how long-form spoken content works.
+            Some people collect files. Lectures gathered over years. Live recordings from favorite bands. Interviews and talks they return to again and again. These collections represent something — taste, curiosity, commitment.
           </p>
           <p class="text-xl text-gray-300 leading-relaxed mb-8">
-            With lectures, audiobooks, and interviews, you're working through material over days or weeks. You pick up where you left off. You miss a phrase and skip back a few seconds. You're not consuming — you're pursuing something.
+            Most apps want to be the source, the library, the platform — users sign in to get their rations. But if you've spent years collecting things worth keeping, you don't need software that competes with your library. You need something that supports it.
           </p>
           <p class="text-xl text-gray-300 leading-relaxed">
-            We built Tam Listen for that kind of listening.
+            Tam Listen stays out of the way. Your files. Your library. We're here to help you enjoy them.
           </p>
         </div>
       </div>
