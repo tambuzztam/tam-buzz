@@ -11,7 +11,7 @@ const { href, text } = Astro.props;
 <div class="w-full flex justify-center pb-8 pt-4">
   <a
     href={href}
-    class="flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
+    class="nav-hint flex flex-col items-center text-gray-400 hover:text-white transition-colors group"
   >
     <span class="text-sm mb-2 opacity-75">{text}</span>
     <svg
@@ -28,3 +28,29 @@ const { href, text } = Astro.props;
     </svg>
   </a>
 </div>
+
+<script>
+  document.querySelectorAll(".nav-hint").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (!href?.startsWith("#")) return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+
+      // Temporarily disable scroll-snap so it doesn't fight the navigation
+      const html = document.documentElement;
+      const originalSnap = html.style.scrollSnapType;
+      html.style.scrollSnapType = "none";
+
+      target.scrollIntoView({ behavior: "smooth" });
+
+      // Re-enable snap after the scroll completes
+      setTimeout(() => {
+        html.style.scrollSnapType = originalSnap;
+      }, 800);
+    });
+  });
+</script>

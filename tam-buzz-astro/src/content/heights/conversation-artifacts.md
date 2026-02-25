@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["conversation artifacts"]
 ---
 
-______________________________________________________________________
+---
 
 ## A Different Kind of Conversation
 
@@ -106,6 +106,6 @@ Unlike therapeutic conversations that focus on processing and releasing, philoso
 - **Generative rather than metabolic**: Creating resources for future growth
 - **Proud rather than cathartic**: Something you stand by and want to remember
 
-______________________________________________________________________
+---
 
-*These artifacts represent a new frontier in philosophical practice—combining ancient wisdom traditions with cutting-edge technology to create lasting resources for your ongoing growth and inquiry.*
+_These artifacts represent a new frontier in philosophical practice—combining ancient wisdom traditions with cutting-edge technology to create lasting resources for your ongoing growth and inquiry._

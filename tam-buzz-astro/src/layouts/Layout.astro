@@ -11,15 +11,15 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    
+
     <title>{title}</title>
   </head>
   <body class="bg-gray-900 text-gray-100 antialiased relative">
@@ -40,19 +40,33 @@ const {
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Enable smooth scrolling only when the user has no motion preference */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Use mandatory snap only on larger screens where sections fit the viewport */
+  @media (min-width: 768px) {
+    html {
+      scroll-snap-type: y mandatory;
+    }
   }
 
   section {
     scroll-snap-align: start;
   }
 
-  /* Ensure smooth scrolling works across browsers */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
+  /* Content-heavy sections opt out of snap on mobile */
+  @media (max-width: 767px) {
+    section.snap-none-mobile {
+      scroll-snap-align: none;
     }
   }
 </style>

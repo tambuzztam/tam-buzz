@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["beautiful frequency"]
 ---
 
-______________________________________________________________________
+---
 
 ## A Different Kind of Schedule
 
@@ -175,6 +175,6 @@ Beautiful frequency serves the **long-term relationship** between you and your p
 
 This approach recognizes that **philosophical counseling is not a temporary intervention** but a potential **lifelong companionship in growth**—available when needed, sustainable over time, and respectful of your autonomy and development.
 
-______________________________________________________________________
+---
 
-*The beautiful frequency honors both the natural rhythm of growth and the sustainability of long-term philosophical companionship, creating space for deep development without artificial constraints or dependencies.*
+_The beautiful frequency honors both the natural rhythm of growth and the sustainability of long-term philosophical companionship, creating space for deep development without artificial constraints or dependencies._

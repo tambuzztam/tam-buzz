@@ -5,7 +5,7 @@ date: 2025-09-30
 tags: ["ai enhanced growth"]
 ---
 
-______________________________________________________________________
+---
 
 ## The New Frontier
 
@@ -195,6 +195,6 @@ We envision AI-augmented philosophical practice as a **new form of contemplative
 
 This represents a **historic opportunity**: for the first time in human history, we can have AI as genuine conversation partner in the ancient work of philosophical inquiry and personal growth.
 
-______________________________________________________________________
+---
 
-*AI practice coaching helps you develop this unprecedented capability thoughtfully, ethically, and in service of your ongoing growth as a human being grappling with what matters most.*
+_AI practice coaching helps you develop this unprecedented capability thoughtfully, ethically, and in service of your ongoing growth as a human being grappling with what matters most._

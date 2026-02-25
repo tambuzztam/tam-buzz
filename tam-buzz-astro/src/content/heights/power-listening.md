@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["power listening"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Fundamental Approach
 
@@ -104,6 +104,6 @@ The counselor becomes:
 - A **skilled questioner** who helps you go deeper
 - An **ongoing companion** in your growth and learning
 
-______________________________________________________________________
+---
 
-*This methodology of power listening distinguishes philosophical counseling from both advice-giving and therapeutic interpretation—it honors your mind as the source of wisdom about your own life.*
+_This methodology of power listening distinguishes philosophical counseling from both advice-giving and therapeutic interpretation—it honors your mind as the source of wisdom about your own life._

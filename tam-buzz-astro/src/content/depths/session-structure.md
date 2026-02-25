@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["session structure"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Three-Phase Structure
 
@@ -203,6 +203,6 @@ Once transcripts are available:
 - **Resources for ongoing reflection** and AI collaboration
 - **Treasured artifacts** worth keeping and returning to
 
-______________________________________________________________________
+---
 
-*This structure provides both flexibility and consistency, honoring the unique nature of each person's growth journey while maintaining the professional framework necessary for meaningful philosophical development.*
+_This structure provides both flexibility and consistency, honoring the unique nature of each person's growth journey while maintaining the professional framework necessary for meaningful philosophical development._

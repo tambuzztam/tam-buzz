@@ -33,16 +33,26 @@
       return 0;
     }
 
+    // Temporarily disable scroll-snap during programmatic scrolling
+    function scrollWithoutSnap(el) {
+      const html = document.documentElement;
+      const originalSnap = html.style.scrollSnapType;
+      html.style.scrollSnapType = "none";
+
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      setTimeout(() => {
+        html.style.scrollSnapType = originalSnap;
+      }, 800);
+    }
+
     // Function to scroll to the next section
     function scrollToNextSection() {
       currentSectionIndex = getCurrentSection();
       const nextIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
 
       if (nextIndex > currentSectionIndex) {
-        sections[nextIndex].scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        scrollWithoutSnap(sections[nextIndex]);
       }
     }
 
@@ -52,10 +62,7 @@
       const prevIndex = Math.max(currentSectionIndex - 1, 0);
 
       if (prevIndex < currentSectionIndex) {
-        sections[prevIndex].scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        scrollWithoutSnap(sections[prevIndex]);
       }
     }
 
@@ -63,7 +70,12 @@
     document.addEventListener("keydown", (event) => {
       // Skip when focus is in an interactive element
       const tag = document.activeElement?.tagName?.toLowerCase();
-      if (tag === "input" || tag === "textarea" || tag === "select" || document.activeElement?.isContentEditable) {
+      if (
+        tag === "input" ||
+        tag === "textarea" ||
+        tag === "select" ||
+        document.activeElement?.isContentEditable
+      ) {
         return;
       }
 

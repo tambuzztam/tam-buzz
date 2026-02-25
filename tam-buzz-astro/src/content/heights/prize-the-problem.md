@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["prize the problem"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Principle
 
@@ -43,6 +43,6 @@ You don't need to arrive already having identified and formulated a problem. Dis
 
 The problem becomes a companion in your philosophical journey, not a burden to be carried.
 
-______________________________________________________________________
+---
 
-*This principle works hand-in-hand with "Treasure the Mind"—together they form the foundation of how we approach philosophical counseling as growth work.*
+_This principle works hand-in-hand with "Treasure the Mind"—together they form the foundation of how we approach philosophical counseling as growth work._

@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["what is important"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Central Question
 
@@ -140,6 +140,6 @@ What's important to you:
 
 This is why philosophical counseling is an **ongoing practice**, not a one-time intervention.
 
-______________________________________________________________________
+---
 
-*Understanding what's important to you is the foundation for all meaningful growth, decision-making, and the development of a life worth living.*
+_Understanding what's important to you is the foundation for all meaningful growth, decision-making, and the development of a life worth living._
