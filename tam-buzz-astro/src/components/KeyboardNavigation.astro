@@ -61,6 +61,12 @@
 
     // Handle keyboard events
     document.addEventListener("keydown", (event) => {
+      // Skip when focus is in an interactive element
+      const tag = document.activeElement?.tagName?.toLowerCase();
+      if (tag === "input" || tag === "textarea" || tag === "select" || document.activeElement?.isContentEditable) {
+        return;
+      }
+
       // Check for down arrow key (key code 40 or 'ArrowDown')
       if (event.key === "ArrowDown" || event.keyCode === 40) {
         event.preventDefault(); // Prevent default scrolling behavior

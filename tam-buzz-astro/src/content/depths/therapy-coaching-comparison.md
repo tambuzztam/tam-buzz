@@ -154,7 +154,7 @@ While philosophical counseling, therapy, and coaching all aim to help people, th
 ### The Goal of Conversation
 
 **Therapy**: Process and metabolize for healing
-**Coaching**: Strategize and plan for achievement\
+**Coaching**: Strategize and plan for achievement
 **Philosophical Counseling**: Discover and articulate for growth
 
 ### The Value of What's Said

@@ -10,7 +10,7 @@ import AppLayout from '../../layouts/AppLayout.astro';
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b" style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1);">
       <div class="max-w-3xl mx-auto px-6 py-4">
-        <a href="/listen" class="text-lg font-medium transition-colors" style="color: #CEDA8E;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#CEDA8E'">
+        <a href="/listen" class="dwelling-nav-link text-lg font-medium transition-colors">
           ← Tam Listen
         </a>
       </div>
@@ -124,7 +124,7 @@ import AppLayout from '../../layouts/AppLayout.astro';
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-white/10">
       <div class="max-w-3xl mx-auto text-center">
-        <a href="/listen" class="transition-colors font-medium" style="color: #CEDA8E;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#CEDA8E'">
+        <a href="/listen" class="dwelling-nav-link transition-colors font-medium">
           ← Back to Tam Listen
         </a>
         <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400 mt-8">
@@ -247,5 +247,14 @@ import AppLayout from '../../layouts/AppLayout.astro';
 
   .dwelling-link:hover {
     color: #97A859;
+  }
+
+  .dwelling-nav-link {
+    color: #CEDA8E;
+    transition: color 0.2s;
+  }
+
+  .dwelling-nav-link:hover {
+    color: white;
   }
 </style>

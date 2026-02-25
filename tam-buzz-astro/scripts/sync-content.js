@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Paths
-const VAULT_PATH = '/Users/benjaminpolansky/obsidian/death-of-socrates/distribution/tam-buzz';
+const VAULT_PATH = process.env.VAULT_PATH || '/Users/benjaminpolansky/obsidian/death-of-socrates/distribution/tam-buzz';
 const ASTRO_CONTENT_PATH = path.join(__dirname, '..', 'src', 'content');
 
 console.log('🔄 Syncing content from Obsidian vault to Astro...\n');
@@ -171,41 +171,56 @@ function processMarkdownFile(sourceFile, destFile) {
 function syncCollection(collectionName) {
   const sourcePath = path.join(VAULT_PATH, collectionName);
   const destPath = path.join(ASTRO_CONTENT_PATH, collectionName);
+  const tempDestPath = destPath + '.tmp-sync';
   
   console.log(`📁 Processing ${collectionName} collection...`);
   
-  // Clear existing content
-  if (fs.existsSync(destPath)) {
-    fs.rmSync(destPath, { recursive: true });
+  // Prepare temporary destination directory
+  if (fs.existsSync(tempDestPath)) {
+    fs.rmSync(tempDestPath, { recursive: true });
   }
-  fs.mkdirSync(destPath, { recursive: true });
+  fs.mkdirSync(tempDestPath, { recursive: true });
   
-  // Process all markdown files EXCEPT README files
-  if (fs.existsSync(sourcePath)) {
-    const files = fs.readdirSync(sourcePath);
-    const markdownFiles = files.filter(file => 
-      file.endsWith('.md') && 
-      !file.toLowerCase().includes('readme')
-    );
-    
-    let syncedCount = 0;
-    let draftCount = 0;
-    
-    for (const file of markdownFiles) {
-      const sourceFile = path.join(sourcePath, file);
-      const destFile = path.join(destPath, file);
-      const wasSynced = processMarkdownFile(sourceFile, destFile);
+  try {
+    // Process all markdown files EXCEPT README files
+    if (fs.existsSync(sourcePath)) {
+      const files = fs.readdirSync(sourcePath);
+      const markdownFiles = files.filter(file => 
+        file.endsWith('.md') && 
+        !file.toLowerCase().includes('readme')
+      );
       
-      if (wasSynced) {
-        syncedCount++;
-      } else {
-        draftCount++;
+      let syncedCount = 0;
+      let draftCount = 0;
+      
+      for (const file of markdownFiles) {
+        const sourceFile = path.join(sourcePath, file);
+        const destFile = path.join(tempDestPath, file);
+        const wasSynced = processMarkdownFile(sourceFile, destFile);
+        
+        if (wasSynced) {
+          syncedCount++;
+        } else {
+          draftCount++;
+        }
       }
+      
+      console.log(`   ${syncedCount} files synced, ${draftCount} drafts skipped (READMEs ignored)\n`);
+    } else {
+      console.log(`   ⚠️  Source directory not found: ${sourcePath}\n`);
     }
-    
-    console.log(`   ${syncedCount} files synced, ${draftCount} drafts skipped (READMEs ignored)\n`);
-  } else {
-    console.log(`   ⚠️  Source directory not found: ${sourcePath}\n`);
+
+    // After successful processing, replace the existing destination directory
+    if (fs.existsSync(destPath)) {
+      fs.rmSync(destPath, { recursive: true });
+    }
+    fs.renameSync(tempDestPath, destPath);
+  } catch (error) {
+    // On failure, clean up the temporary directory and rethrow
+    if (fs.existsSync(tempDestPath)) {
+      fs.rmSync(tempDestPath, { recursive: true });
+    }
+    throw error;
   }
 }
 
