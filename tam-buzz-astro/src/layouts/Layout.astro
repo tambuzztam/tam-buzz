@@ -11,7 +11,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -41,8 +41,15 @@ const {
   html {
     font-family: system-ui, sans-serif;
     scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Enable smooth scrolling only when the user has no motion preference */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   /* Use mandatory snap only on larger screens where sections fit the viewport */
@@ -60,13 +67,6 @@ const {
   @media (max-width: 767px) {
     section.snap-none-mobile {
       scroll-snap-align: none;
-    }
-  }
-
-  /* Ensure smooth scrolling works across browsers */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
     }
   }
 </style>

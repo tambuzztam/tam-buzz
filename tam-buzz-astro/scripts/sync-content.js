@@ -33,16 +33,15 @@ function extractContentMetadata(content, filePath) {
       .replace(/\b\w/g, (l) => l.toUpperCase());
   }
 
-  // Extract description from first italic line (lines starting with *text*)
+  // Extract description from first italic line (*text* or _text_)
   let description = "";
-  const descMatch = lines.find(
-    (line) =>
-      line.trim().startsWith("*") &&
-      line.trim().endsWith("*") &&
-      line.trim().length > 2,
-  );
+  const descMatch = lines.find((line) => {
+    const trimmed = line.trim();
+    return trimmed.match(/^([*_])(.+)\1$/);
+  });
   if (descMatch) {
-    description = descMatch.replace(/^\*(.+)\*$/, "$1").trim();
+    const match = descMatch.trim().match(/^([*_])(.+)\1$/);
+    description = match[2].trim();
   }
 
   // Use file modification date
@@ -118,8 +117,9 @@ function removeRedundantTitleAndDescription(content, metadata) {
     }
 
     // Check if this is the description line that matches our metadata
-    if (line.startsWith("*") && line.endsWith("*") && line.length > 2) {
-      const descText = line.replace(/^\*(.+)\*$/, "$1").trim();
+    const descLineMatch = line.match(/^([*_])(.+)\1$/);
+    if (descLineMatch) {
+      const descText = descLineMatch[2].trim();
       if (metadata.description && descText === metadata.description) {
         // Skip this description line
         i++;
