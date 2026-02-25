@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["technical infrastructure"]
 ---
 
-______________________________________________________________________
+---
 
 ## Custom-Built Infrastructure
 
@@ -173,6 +173,6 @@ Our transcripts are specifically formatted to work well with Large Language Mode
 
 This technical infrastructure represents something unprecedented: **the marriage of ancient philosophical practice with cutting-edge AI technology**. We're using the most advanced tools available to preserve and enhance the oldest form of philosophical inquiry—meaningful conversation about what matters most.
 
-______________________________________________________________________
+---
 
-*This technical foundation enables a new frontier in philosophical practice, where the wisdom generated in conversation becomes a lasting resource for ongoing growth, reflection, and AI-augmented philosophical inquiry.*
+_This technical foundation enables a new frontier in philosophical practice, where the wisdom generated in conversation becomes a lasting resource for ongoing growth, reflection, and AI-augmented philosophical inquiry._

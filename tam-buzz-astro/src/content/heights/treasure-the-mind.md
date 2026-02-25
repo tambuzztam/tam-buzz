@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["treasure the mind"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Principle
 
@@ -71,6 +71,6 @@ In our current culture, it's rare to:
 
 Philosophical counseling provides this rare gift—the chance to treasure what's already there, waiting to be discovered.
 
-______________________________________________________________________
+---
 
-*Combined with "Prize the Problem," this principle creates the foundation for philosophical counseling as a practice of discovery, growth, and serious engagement with what matters most.*
+_Combined with "Prize the Problem," this principle creates the foundation for philosophical counseling as a practice of discovery, growth, and serious engagement with what matters most._

@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["philosophical foundations"]
 ---
 
-______________________________________________________________________
+---
 
 ## Ancient Roots, Modern Application
 
@@ -172,6 +172,6 @@ Philosophy is not a museum piece but a **living tradition** that continues to de
 
 By grounding our practice in these deep philosophical foundations while remaining responsive to contemporary challenges and opportunities, we honor both the wisdom of the past and the needs of the present.
 
-______________________________________________________________________
+---
 
-*These philosophical foundations provide the intellectual framework for our practical approach, ensuring that our methods are grounded in centuries of wisdom about human development and the examined life.*
+_These philosophical foundations provide the intellectual framework for our practical approach, ensuring that our methods are grounded in centuries of wisdom about human development and the examined life._

@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["growing vs faring"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Core Distinction
 
@@ -86,6 +86,6 @@ Notice how growth is the enhancement or strengthening of something **already pre
 - Strengthening natural development
 - Honoring the trajectory you're already on
 
-______________________________________________________________________
+---
 
-*This fundamental distinction underlies everything else in the Tam approach—it's why we focus on conversation, discovery, and the treasuring of problems as growth opportunities.*
+_This fundamental distinction underlies everything else in the Tam approach—it's why we focus on conversation, discovery, and the treasuring of problems as growth opportunities._

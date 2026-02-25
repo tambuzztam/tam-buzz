@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["therapy coaching comparison"]
 ---
 
-______________________________________________________________________
+---
 
 ## Three Distinct Approaches
 
@@ -190,6 +190,6 @@ What philosophical counseling offers that others don't:
 - **Creating lasting artifacts from meaningful conversations**
 - **Supporting your trajectory as a growing being**
 
-______________________________________________________________________
+---
 
-*Understanding these distinctions helps you choose the right type of support for your current needs and circumstances, while recognizing the unique value of philosophical accompaniment in your growth journey.*
+_Understanding these distinctions helps you choose the right type of support for your current needs and circumstances, while recognizing the unique value of philosophical accompaniment in your growth journey._

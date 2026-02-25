@@ -5,7 +5,7 @@ date: 2025-09-11
 tags: ["professional background"]
 ---
 
-______________________________________________________________________
+---
 
 ## The Profession
 
@@ -137,6 +137,6 @@ The combination of rigorous philosophical education and specialized counseling t
 - **Ongoing development** of skills and knowledge
 - **Collaborative relationships** with other helping professionals
 
-______________________________________________________________________
+---
 
-*This professional foundation ensures that philosophical counseling is practiced with both philosophical rigor and professional responsibility, always in service of your growth and development.*
+_This professional foundation ensures that philosophical counseling is practiced with both philosophical rigor and professional responsibility, always in service of your growth and development._
