@@ -9,6 +9,7 @@ build
 
 # Hugo build output
 public/
+!tam-buzz-astro/public/
 resources/
 
 # Hugo temporary files

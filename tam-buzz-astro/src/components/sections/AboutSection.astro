@@ -1,0 +1,45 @@
+---
+import CTAButton from "../ui/CTAButton.astro";
+import NavigationHint from "../ui/NavigationHint.astro";
+---
+
+<!-- About Section -->
+<section
+  id="about"
+  class="min-h-screen flex flex-col px-4 sm:px-6 lg:px-8"
+>
+  <div class="max-w-4xl mx-auto flex-1 flex flex-col justify-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">About Tam Philosophical Counseling</h2>
+    <div class="prose prose-lg sm:prose-xl prose-invert max-w-3xl mx-auto mb-12">
+      <p class="text-xl text-gray-300 mb-6">
+        You arrive with standing, not as someone who needs fixing. We recognize
+        you as a growing and a knowing being — someone already able to engage in good
+        philosophic conversation, whether you call it that or not.
+      </p>
+      <p class="text-lg text-gray-300 mb-6">
+        Your philosophical counselor is an ally — a power
+        listener who takes your mind seriously. Not someone standing, wisely, above you. You have
+        reserves that we don't have; we have reserves you don't have. Both sides bring
+        something, and the ongoing conversation is mutual and richer for it.
+      </p>
+      <p class="text-lg text-gray-400">
+        Our counselors are certified by
+        <a
+          href="https://appa.edu/about/"
+          class="text-blue-400 hover:text-blue-300 underline">APPA</a
+        >
+        (the American Philosophical Practitioners Association). With a background in
+        software development, we've built infrastructure that turns
+        conversations into artifacts worth keeping — audio files that join your
+        library and clean transcripts optimized for AI collaboration.
+      </p>
+    </div>
+
+    <!-- Let's talk CTA -->
+    <div class="mt-8 text-center">
+      <CTAButton variant="secondary" />
+    </div>
+
+    <NavigationHint href="#process" text="What to expect" />
+  </div>
+</section>

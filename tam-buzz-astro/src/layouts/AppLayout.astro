@@ -6,7 +6,7 @@ export interface Props {
 
 const {
   title,
-  description = "Philosophical counseling for people facing meaningful decisions",
+  description = "An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio.",
 } = Astro.props;
 ---
 
@@ -22,15 +22,23 @@ const {
     
     <title>{title}</title>
   </head>
-  <body class="bg-gray-900 text-gray-100 antialiased relative">
-    <!-- Background Image -->
+  <body class="text-gray-100 antialiased relative">
+    <!-- App-specific gradient background -->
     <div
-      class="fixed inset-0 -z-10 opacity-50"
-      style="background-image: url('/inverse_coldmountain.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"
+      class="fixed inset-0 -z-10"
+      style="background: linear-gradient(135deg, #000000 0%, #0f0f0f 40%, #1a1a1a 70%, #1a1f1a 100%);"
     >
     </div>
+    <!-- Mountain background overlay at low opacity -->
     <div
-      class="fixed inset-0 -z-10 bg-gradient-to-b from-gray-900/40 via-gray-900/60 to-gray-900/70"
+      class="fixed inset-0 -z-10"
+      style="
+        background-image: url('/inverse_coldmountain.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+        opacity: 0.03;
+      "
     >
     </div>
     <slot />
@@ -40,9 +48,8 @@ const {
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
   }
 
   section {
