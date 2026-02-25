@@ -16,10 +16,10 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    
+
     <title>{title}</title>
   </head>
   <body class="bg-gray-900 text-gray-100 antialiased relative">
@@ -40,13 +40,27 @@ const {
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Use mandatory snap only on larger screens where sections fit the viewport */
+  @media (min-width: 768px) {
+    html {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
   section {
     scroll-snap-align: start;
+  }
+
+  /* Content-heavy sections opt out of snap on mobile */
+  @media (max-width: 767px) {
+    section.snap-none-mobile {
+      scroll-snap-align: none;
+    }
   }
 
   /* Ensure smooth scrolling works across browsers */
