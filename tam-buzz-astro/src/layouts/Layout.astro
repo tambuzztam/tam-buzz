@@ -40,8 +40,9 @@ const {
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
   section {
