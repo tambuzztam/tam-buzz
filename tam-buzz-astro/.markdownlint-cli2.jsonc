@@ -1,0 +1,26 @@
+{
+  "config": {
+    "default": true,
+    // Allow long lines
+    "MD013": false,
+    // Allow multiple blank lines before headings
+    "MD022": false,
+    // Allow duplicate heading text
+    "MD024": false,
+    // Allow multiple top-level headings (frontmatter title + content)
+    "MD025": false,
+    // Allow trailing punctuation in headings
+    "MD026": false,
+    // Allow inline HTML
+    "MD033": false,
+    // Allow bare URLs
+    "MD034": false,
+    // Allow emphasis as heading
+    "MD036": false,
+    // Allow non-standard frontmatter
+    "MD041": false,
+    // Don't enforce spaces after list markers
+    "MD030": false,
+  },
+  "ignores": ["node_modules"],
+}
