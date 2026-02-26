@@ -3,12 +3,10 @@
 ---
 
 <script>
-  // Keyboard navigation for down arrow key
+  // Keyboard navigation for arrow keys
   document.addEventListener("DOMContentLoaded", () => {
-    // Get all sections with IDs (navigable sections)
     const sections = Array.from(document.querySelectorAll("section[id]"));
 
-    // Add the first hero section (no ID) to the beginning
     const heroSection = document.querySelector("section");
     if (heroSection && !heroSection.id) {
       sections.unshift(heroSection);
@@ -16,7 +14,6 @@
 
     let currentSectionIndex = 0;
 
-    // Function to get the currently visible section
     function getCurrentSection() {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
@@ -33,20 +30,59 @@
       return 0;
     }
 
-    // Temporarily disable scroll-snap during programmatic scrolling
+    // Temporarily disable scroll-snap during programmatic scrolling.
+    // Uses the scrollend event (with a timeout fallback) so snap isn't
+    // re-enabled before the scroll finishes — which previously caused
+    // proximity snap to yank the viewport back to the wrong section.
+    let _snapTimer = null;
+    let _scrollEndHandler = null;
+
     function scrollWithoutSnap(el) {
       const html = document.documentElement;
-      const originalSnap = html.style.scrollSnapType;
+
+      // Cancel any pending restore from a previous call
+      clearTimeout(_snapTimer);
+      if (_scrollEndHandler) {
+        window.removeEventListener("scrollend", _scrollEndHandler);
+        _scrollEndHandler = null;
+      }
+
       html.style.scrollSnapType = "none";
+      const prefersReducedMotion =
+        typeof window !== "undefined" &&
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const scrollOptions = prefersReducedMotion
+        ? { block: "start" }
+        : { behavior: "smooth", block: "start" };
+      el.scrollIntoView(scrollOptions);
 
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Always restore to "" so the CSS rule takes effect again —
+      // avoids the race where a second call captures "none" as the
+      // "original" value and permanently disables snap.
+      function restore() {
+        html.style.scrollSnapType = "";
+        _snapTimer = null;
+        _scrollEndHandler = null;
+      }
 
-      setTimeout(() => {
-        html.style.scrollSnapType = originalSnap;
-      }, 800);
+      if ("onscrollend" in window) {
+        _scrollEndHandler = () => {
+          clearTimeout(_snapTimer);
+          restore();
+        };
+        window.addEventListener("scrollend", _scrollEndHandler, { once: true });
+        _snapTimer = setTimeout(() => {
+          if (_scrollEndHandler) {
+            window.removeEventListener("scrollend", _scrollEndHandler);
+          }
+          restore();
+        }, 1500);
+      } else {
+        _snapTimer = setTimeout(restore, 1500);
+      }
     }
 
-    // Function to scroll to the next section
     function scrollToNextSection() {
       currentSectionIndex = getCurrentSection();
       const nextIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
@@ -56,7 +92,6 @@
       }
     }
 
-    // Function to scroll to the previous section
     function scrollToPreviousSection() {
       currentSectionIndex = getCurrentSection();
       const prevIndex = Math.max(currentSectionIndex - 1, 0);
@@ -66,9 +101,7 @@
       }
     }
 
-    // Handle keyboard events
     document.addEventListener("keydown", (event) => {
-      // Skip when focus is in an interactive element
       const tag = document.activeElement?.tagName?.toLowerCase();
       if (
         tag === "input" ||
@@ -79,19 +112,15 @@
         return;
       }
 
-      // Check for down arrow key (key code 40 or 'ArrowDown')
       if (event.key === "ArrowDown" || event.keyCode === 40) {
-        event.preventDefault(); // Prevent default scrolling behavior
+        event.preventDefault();
         scrollToNextSection();
-      }
-      // Check for up arrow key (key code 38 or 'ArrowUp')
-      else if (event.key === "ArrowUp" || event.keyCode === 38) {
-        event.preventDefault(); // Prevent default scrolling behavior
+      } else if (event.key === "ArrowUp" || event.keyCode === 38) {
+        event.preventDefault();
         scrollToPreviousSection();
       }
     });
 
-    // Update current section on scroll (for better tracking)
     let scrollTimeout;
     window.addEventListener("scroll", () => {
       clearTimeout(scrollTimeout);
