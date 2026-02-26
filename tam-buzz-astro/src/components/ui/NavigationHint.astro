@@ -44,7 +44,16 @@ const { href, text } = Astro.props;
     }
 
     html.style.scrollSnapType = "none";
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const scrollOptions = prefersReducedMotion
+      ? { block: "start" }
+      : { behavior: "smooth", block: "start" };
+
+    target.scrollIntoView(scrollOptions);
 
     function restore() {
       html.style.scrollSnapType = "";

@@ -48,7 +48,14 @@
       }
 
       html.style.scrollSnapType = "none";
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const prefersReducedMotion =
+        typeof window !== "undefined" &&
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const scrollOptions = prefersReducedMotion
+        ? { block: "start" }
+        : { behavior: "smooth", block: "start" };
+      el.scrollIntoView(scrollOptions);
 
       // Always restore to "" so the CSS rule takes effect again —
       // avoids the race where a second call captures "none" as the
