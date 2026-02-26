@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tam.buzz/sitemap-index.xml
