@@ -1,0 +1,14 @@
+{
+  "name": "Tam Listen",
+  "short_name": "Listen",
+  "icons": [
+    {
+      "src": "/tam-listen-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}
