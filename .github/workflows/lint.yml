@@ -32,5 +32,8 @@ jobs:
       - name: Check formatting (Prettier)
         run: npm run format:check
 
+      - name: Lint code (ESLint)
+        run: npm run lint:code
+
       - name: Lint markdown
         run: npm run lint:markdown
