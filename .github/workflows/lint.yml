@@ -1,0 +1,36 @@
+name: Lint & Format
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tam-buzz-astro/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "tam-buzz-astro/**"
+
+jobs:
+  lint:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tam-buzz-astro
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: tam-buzz-astro/package-lock.json
+
+      - run: npm ci
+
+      - name: Check formatting (Prettier)
+        run: npm run format:check
+
+      - name: Lint markdown
+        run: npm run lint:markdown
