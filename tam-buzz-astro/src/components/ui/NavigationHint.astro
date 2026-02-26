@@ -30,6 +30,45 @@ const { href, text } = Astro.props;
 </div>
 
 <script>
+  // Shared state so rapid clicks don't leave snap permanently disabled
+  let _snapTimer = null;
+  let _scrollEndHandler = null;
+
+  function scrollWithoutSnap(target) {
+    const html = document.documentElement;
+
+    clearTimeout(_snapTimer);
+    if (_scrollEndHandler) {
+      window.removeEventListener("scrollend", _scrollEndHandler);
+      _scrollEndHandler = null;
+    }
+
+    html.style.scrollSnapType = "none";
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    function restore() {
+      html.style.scrollSnapType = "";
+      _snapTimer = null;
+      _scrollEndHandler = null;
+    }
+
+    if ("onscrollend" in window) {
+      _scrollEndHandler = () => {
+        clearTimeout(_snapTimer);
+        restore();
+      };
+      window.addEventListener("scrollend", _scrollEndHandler, { once: true });
+      _snapTimer = setTimeout(() => {
+        if (_scrollEndHandler) {
+          window.removeEventListener("scrollend", _scrollEndHandler);
+        }
+        restore();
+      }, 1500);
+    } else {
+      _snapTimer = setTimeout(restore, 1500);
+    }
+  }
+
   document.querySelectorAll(".nav-hint").forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
@@ -39,18 +78,7 @@ const { href, text } = Astro.props;
       if (!target) return;
 
       e.preventDefault();
-
-      // Temporarily disable scroll-snap so it doesn't fight the navigation
-      const html = document.documentElement;
-      const originalSnap = html.style.scrollSnapType;
-      html.style.scrollSnapType = "none";
-
-      target.scrollIntoView({ behavior: "smooth" });
-
-      // Re-enable snap after the scroll completes
-      setTimeout(() => {
-        html.style.scrollSnapType = originalSnap;
-      }, 800);
+      scrollWithoutSnap(target);
     });
   });
 </script>
