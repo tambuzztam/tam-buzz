@@ -10,7 +10,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
     <!-- Navigation -->
     <nav
       class="fixed top-0 w-full z-50 border-b"
-      style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1);"
+      style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
     >
       <div class="max-w-3xl mx-auto px-6 py-4">
         <a
@@ -310,7 +310,10 @@ import AppLayout from "../../layouts/AppLayout.astro";
     </article>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/10">
+    <footer
+      class="py-12 px-6 border-t border-white/10"
+      style="padding-bottom: max(3rem, env(safe-area-inset-bottom));"
+    >
       <div class="max-w-3xl mx-auto text-center">
         <a
           href="/listen"

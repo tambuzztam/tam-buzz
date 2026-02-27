@@ -19,7 +19,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#000000" />
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalURL.href} />
@@ -66,7 +70,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       })}
     />
   </head>
-  <body class="text-gray-100 antialiased relative">
+  <body class="bg-black text-gray-100 antialiased relative">
     <!-- App-specific gradient background -->
     <div
       class="fixed inset-0 -z-10"
@@ -94,6 +98,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     font-family: system-ui, sans-serif;
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
+    background-color: #000000;
   }
 
   section {
