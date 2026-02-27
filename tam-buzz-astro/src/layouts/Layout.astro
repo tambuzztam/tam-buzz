@@ -94,13 +94,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Mobile: disable snap (avoids jumpy proximity behaviour) and
-     leave generous scroll-padding so scrollIntoView clears Safari's
-     address bar / Dynamic Island chrome. */
+  /* Mobile: disable snap (avoids jumpy proximity behaviour) */
   @media (max-width: 767px) {
     html {
       scroll-snap-type: none;
-      scroll-padding-top: 5rem;
     }
   }
 
