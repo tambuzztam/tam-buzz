@@ -7,6 +7,21 @@ import AppLayout from "../../layouts/AppLayout.astro";
   description="An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio."
 >
   <main>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 border-b"
+      style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
+    >
+      <div class="max-w-4xl mx-auto px-6 py-4">
+        <a
+          href="/"
+          class="listen-nav-link text-lg font-medium transition-colors"
+        >
+          ← tam.buzz
+        </a>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center px-6 py-20">
       <div class="max-w-4xl mx-auto text-center">
@@ -707,8 +722,11 @@ import AppLayout from "../../layouts/AppLayout.astro";
       style="padding-bottom: calc(3rem + env(safe-area-inset-bottom));"
     >
       <div class="max-w-4xl mx-auto text-center">
+        <a href="/" class="listen-nav-link transition-colors font-medium">
+          tam.buzz
+        </a>
         <div
-          class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
+          class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400 mt-8"
         >
           <a href="/listen/privacy" class="hover:text-white transition-colors"
             >Privacy Policy</a
@@ -750,5 +768,14 @@ import AppLayout from "../../layouts/AppLayout.astro";
       0 15px 40px rgba(0, 0, 0, 0.4),
       0 8px 20px rgba(206, 218, 142, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  .listen-nav-link {
+    color: #ceda8e;
+    transition: color 0.2s;
+  }
+
+  .listen-nav-link:hover {
+    color: white;
   }
 </style>

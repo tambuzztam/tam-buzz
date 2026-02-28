@@ -180,10 +180,12 @@ import AppLayout from "../../layouts/AppLayout.astro";
           <p>
             The app TAMBUZZTAM LLC has built is one such enjoyment layer — a
             file-first iOS app for power listeners built on these convictions.
-            But the principle is larger than any single application. Any utility
-            that helps you dwell with what you've chosen to keep, without
-            inserting its own agenda — letting what you have taken ownership of
-            slowly become a part of you — is doing this work.
+            But the principle is larger than any single application. <a
+              href="/#solution"
+              class="dwelling-link">Any utility</a
+            >
+            that helps you dwell with what you've chosen to keep, without inserting
+            its own agenda slowly become a part of you — is doing this work.
           </p>
 
           <h2>Coming into Possession</h2>
@@ -315,14 +317,28 @@ import AppLayout from "../../layouts/AppLayout.astro";
       style="padding-bottom: calc(3rem + env(safe-area-inset-bottom));"
     >
       <div class="max-w-3xl mx-auto text-center">
-        <a
-          href="/listen"
-          class="dwelling-nav-link transition-colors font-medium"
-        >
-          ← Back to Tam Listen
-        </a>
         <div
-          class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400 mt-8"
+          class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-8"
+        >
+          <a
+            href="/listen"
+            class="dwelling-nav-link transition-colors font-medium"
+          >
+            ← Back to Tam Listen
+          </a>
+          <span
+            class="hidden sm:inline"
+            style="color: rgba(206, 218, 142, 0.3);">·</span
+          >
+          <a
+            href="/#solution"
+            class="dwelling-nav-link transition-colors font-medium"
+          >
+            ← Back to tam.buzz
+          </a>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
         >
           <a href="/listen/privacy" class="hover:text-white transition-colors"
             >Privacy Policy</a
