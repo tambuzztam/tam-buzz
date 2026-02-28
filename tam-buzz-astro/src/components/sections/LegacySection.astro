@@ -6,12 +6,17 @@ import NavigationHint from "../ui/NavigationHint.astro";
 <!-- Legacy Section -->
 <section
   id="legacy"
-  class="snap-none-mobile pt-24 pb-20 md:py-20 md:min-h-[100dvh] flex flex-col px-4 sm:px-6 lg:px-8"
+  class="snap-none-mobile pt-24 pb-20 md:py-20 md:min-h-[100dvh] flex flex-col px-4 sm:px-6 lg:px-8 bg-gray-800/50"
 >
   <div class="max-w-4xl mx-auto flex-1 flex flex-col justify-center">
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
       What you leave behind
     </h2>
+    <p
+      class="text-lg sm:text-xl uppercase tracking-widest text-amber-400/80 text-center mb-16"
+    >
+      Something to carry forward
+    </p>
     <div
       class="prose prose-lg sm:prose-xl prose-invert max-w-3xl mx-auto mb-12"
     >
@@ -48,6 +53,6 @@ import NavigationHint from "../ui/NavigationHint.astro";
       <CTAButton variant="secondary" />
     </div>
 
-    <NavigationHint href="#process" text="What to expect" />
+    <NavigationHint href="#cta" text="Ready to start?" />
   </div>
 </section>
