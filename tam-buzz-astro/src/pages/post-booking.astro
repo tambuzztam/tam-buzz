@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Booking Complete — Tam"
+  description="Your philosophical counseling session has been reserved."
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex" />
+  </Fragment>
+  <section
+    class="min-h-[100dvh] flex flex-col px-4 sm:px-6 lg:px-8 bg-gray-800/50"
+  >
+    <div class="max-w-4xl mx-auto flex-1 flex flex-col justify-center">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
+        Booking Complete
+      </h1>
+      <p
+        class="text-lg sm:text-xl uppercase tracking-widest text-amber-400/80 text-center mb-16"
+      >
+        A session has been reserved just for you
+      </p>
+      <div
+        class="prose prose-lg sm:prose-xl prose-invert max-w-3xl mx-auto mb-12"
+      >
+        <p class="text-xl text-gray-300">
+          You'll receive a Zoom link for our meeting via email. Please look out
+          for that. Questions or thoughts before your session? Feel free to
+          reach out at
+          <a
+            href="mailto:info@tam.buzz"
+            class="text-amber-400 hover:text-amber-300 no-underline"
+            >info@tam.buzz</a
+          >.
+        </p>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a
+          href="/"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+        >
+          Back to Tam
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
