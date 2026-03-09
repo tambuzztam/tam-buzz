@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CTAButton from "../components/ui/CTAButton.astro";
 ---
 
 <Layout
   title="Booking Complete — Tam"
   description="Your philosophical counseling session has been reserved."
 >
+  <Fragment slot="head">
+    <meta name="robots" content="noindex" />
+  </Fragment>
   <section
     class="min-h-[100dvh] flex flex-col px-4 sm:px-6 lg:px-8 bg-gray-800/50"
   >
@@ -35,7 +37,12 @@ import CTAButton from "../components/ui/CTAButton.astro";
       </div>
 
       <div class="mt-12 text-center">
-        <CTAButton variant="secondary" text="Back to Tam" href="/" />
+        <a
+          href="/"
+          class="inline-block px-6 py-3 bg-blue-500/20 border border-blue-400/50 hover:bg-blue-500/30 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-base font-medium rounded-lg transition-all"
+        >
+          Back to Tam
+        </a>
       </div>
     </div>
   </section>
