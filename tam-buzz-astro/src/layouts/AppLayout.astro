@@ -74,25 +74,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       })}
     />
   </head>
-  <body class="bg-black text-gray-100 antialiased relative">
-    <!-- App-specific gradient background -->
-    <div
-      class="fixed inset-0 -z-10"
-      style="background: linear-gradient(135deg, #000000 0%, #0f0f0f 40%, #1a1a1a 70%, #1a1f1a 100%);"
-    >
-    </div>
-    <!-- Mountain background overlay at low opacity -->
-    <div
-      class="fixed inset-0 -z-10"
-      style="
-        background-image: url('/inverse_coldmountain.jpg'); 
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-position: center;
-        opacity: 0.03;
-      "
-    >
-    </div>
+  <body
+    class="text-gray-100 antialiased"
+    style="
+      background:
+        linear-gradient(135deg, rgba(0,0,0,0.94) 0%, rgba(15,15,15,0.95) 40%, rgba(26,26,26,0.96) 70%, rgba(26,31,26,0.97) 100%),
+        url('/inverse_coldmountain.jpg') center / cover no-repeat;
+      background-attachment: fixed;
+    "
+  >
     <slot />
   </body>
 </html>
@@ -107,6 +97,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   section {
     scroll-snap-align: start;
+  }
+
+  /* Shared fixed backdrop layer — uses 100vh as fallback, 100lvh where supported */
+  .bg-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    height: 100lvh;
   }
 
   /* Ensure smooth scrolling works across browsers */

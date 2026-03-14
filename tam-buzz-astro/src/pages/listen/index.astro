@@ -4,13 +4,13 @@ import AppLayout from "../../layouts/AppLayout.astro";
 
 <AppLayout
   title="Tam Listen - Audio Player for Power Listeners"
-  description="An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio."
+  description="A file-first listening app for people with real media libraries. Play audio and video container files, organize with projects, and listen to everything."
 >
   <main>
     <!-- Navigation -->
     <nav
       class="fixed top-0 w-full z-50 border-b"
-      style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
+      style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
     >
       <div class="max-w-4xl mx-auto px-6 py-4">
         <a
@@ -216,16 +216,15 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              File over app
+              Play what you have
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Apps come and go. Your files can last. Import from your device,
-              Dropbox, or Google Drive — Tam Listen plays them, but your library
-              lives wherever you keep it. No lock-in, no proprietary formats, no
-              walled garden.
+              Import from your device, Dropbox, or Google Drive. Tam Listen
+              plays your local and cloud-imported files without conversion. If
+              you have it, you can listen to it.
             </p>
           </div>
 
@@ -268,16 +267,16 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              Video identity
+              Audio + video containers
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Audio files get a video identity on iOS — ambient visualization,
-              Picture-in-Picture multitasking, enhanced lock screen and Dynamic
-              Island presence. The system behaviors iOS reserves for video apps,
-              working for your audio.
+              Play common audio formats and video containers in one unified
+              listening experience. MP4 and MOV content where listening is the
+              primary use case — with consistent controls and system integration
+              across all content types.
             </p>
           </div>
 
@@ -335,7 +334,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
             </div>
           </div>
 
-          <!-- Live Activities -->
+          <!-- Now Playing everywhere -->
           <div
             class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
             style="
@@ -374,16 +373,16 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              Live Activities
+              Now Playing everywhere
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light mb-6"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Keep your current listen visible on your Lock Screen and Dynamic
-              Island.
+              Lock Screen, Control Center, and Dynamic Island controls for
+              every listening session.
             </p>
-            <!-- Live Activity Mockup -->
+            <!-- Now Playing Mockup -->
             <div
               class="w-full h-16 bg-black rounded-2xl flex items-center justify-between px-4"
             >
@@ -680,14 +679,10 @@ import AppLayout from "../../layouts/AppLayout.astro";
             curiosity, commitment.
           </p>
           <p class="text-xl text-gray-300 leading-relaxed mb-8">
-            Most apps want to be the source, the library, the platform. But the
-            files you've collected are more important than any app you use to
-            play them. Apps are ephemeral — your library can last.
-          </p>
-          <p class="text-xl text-gray-300 leading-relaxed mb-8">
             Tam Listen is <a href="/listen/dwelling" class="listen-link"
               >an enjoyment layer</a
-            > for your library
+            > for the files you've already collected — a place to engage with
+            what matters to you, at your own pace.
           </p>
         </div>
       </div>
