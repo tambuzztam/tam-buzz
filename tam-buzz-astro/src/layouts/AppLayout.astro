@@ -74,16 +74,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       })}
     />
   </head>
-  <body
-    class="text-gray-100 antialiased"
-    style="
-      background:
-        linear-gradient(135deg, rgba(0,0,0,0.94) 0%, rgba(15,15,15,0.95) 40%, rgba(26,26,26,0.96) 70%, rgba(26,31,26,0.97) 100%),
-        url('/inverse_coldmountain.jpg') center / cover no-repeat;
-      background-attachment: fixed;
-    "
-  >
-    <slot />
+  <body class="text-gray-100 antialiased relative bg-black">
+    <div class="bg-backdrop-stack z-0 pointer-events-none">
+      <div
+        class="bg-backdrop opacity-50"
+        style="background-image: url('/inverse_coldmountain.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"
+      >
+      </div>
+      <div
+        class="bg-backdrop"
+        style="background: linear-gradient(135deg, rgba(0,0,0,0.94) 0%, rgba(15,15,15,0.95) 40%, rgba(26,26,26,0.96) 70%, rgba(26,31,26,0.97) 100%);"
+      >
+      </div>
+    </div>
+    <div class="relative z-10">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -99,17 +105,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     scroll-snap-align: start;
   }
 
-  /* Disable fixed background on mobile — broken on iOS Safari */
-  @media (max-width: 767px) {
-    body {
-      background-attachment: scroll !important;
-    }
-  }
 
   /* Ensure smooth scrolling works across browsers */
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
     }
+  }
+  .bg-backdrop-stack {
+    position: fixed;
+    inset: 0;
+  }
+
+  .bg-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    height: 100lvh;
   }
 </style>
