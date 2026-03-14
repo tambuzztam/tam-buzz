@@ -4,13 +4,13 @@ import AppLayout from "../../layouts/AppLayout.astro";
 
 <AppLayout
   title="Tam Listen - Audio Player for Power Listeners"
-  description="An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio."
+  description="A file-first listening app for people with real media libraries. Play audio and video container files, organize with projects, and listen to everything."
 >
   <main>
     <!-- Navigation -->
     <nav
       class="fixed top-0 w-full z-50 border-b"
-      style="background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
+      style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); border-color: rgba(206, 218, 142, 0.1); padding-top: env(safe-area-inset-top);"
     >
       <div class="max-w-4xl mx-auto px-6 py-4">
         <a
@@ -24,12 +24,12 @@ import AppLayout from "../../layouts/AppLayout.astro";
 
     <!-- Hero Section -->
     <section
-      class="min-h-screen flex items-center justify-center px-6 pt-28 pb-20"
+      class="min-h-screen flex items-center justify-center px-6 pt-14 pb-12"
     >
       <div class="max-w-4xl mx-auto text-center">
         <div class="mb-8">
           <!-- App Icon -->
-          <div class="w-24 h-24 mx-auto mb-8 shadow-2xl">
+          <div class="w-24 h-24 mx-auto mb-4 shadow-2xl">
             <img
               src="/tam-listen-icon.png"
               alt="Tam Listen app icon"
@@ -64,7 +64,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
         </p>
 
         <p
-          class="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed font-light"
+          class="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light"
           style="
           text-shadow: 0 1px 8px rgba(255, 255, 255, 0.1);
         "
@@ -72,53 +72,17 @@ import AppLayout from "../../layouts/AppLayout.astro";
           Bring your files. Listen to everything.
         </p>
 
-        <!-- iPhone Mockup -->
-        <div class="mb-12">
-          <div
-            class="w-64 h-96 mx-auto bg-black rounded-3xl p-2"
-            style="
-            box-shadow: 
-              0 25px 50px rgba(0, 0, 0, 0.6),
-              0 10px 30px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-full h-full rounded-2xl flex items-center justify-center"
-              style="
-              background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
-              border: 1px solid rgba(206, 218, 142, 0.1);
-            "
-            >
-              <div class="text-center p-6">
-                <div
-                  class="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
-                  style="
-                  background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-                  box-shadow: 0 8px 25px rgba(151, 168, 89, 0.3);
-                "
-                >
-                  <svg
-                    class="w-8 h-8 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-                  >
-                    <path d="M8 5v14l11-7z"></path>
-                  </svg>
-                </div>
-                <div
-                  class="text-white text-base mb-2 font-medium"
-                  style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);"
-                >
-                  Now Playing
-                </div>
-                <div class="text-gray-400 text-sm font-light">
-                  Tam Listen Interface
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- App Screenshots -->
+        <div class="mb-8">
+          <picture>
+            <source srcset="/tam-listen-hero.webp" type="image/webp" />
+            <img
+              src="/tam-listen-hero.png"
+              alt="Tam Listen — library view and Now Playing interface"
+              class="max-w-2xl w-full mx-auto"
+              style="filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));"
+            />
+          </picture>
         </div>
 
         <!-- Download Button -->
@@ -149,7 +113,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 px-6">
+    <section class="py-12 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2
@@ -216,286 +180,15 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              File over app
+              Play what you have
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Apps come and go. Your files can last. Import from your device,
-              Dropbox, or Google Drive — Tam Listen plays them, but your library
-              lives wherever you keep it. No lock-in, no proprietary formats, no
-              walled garden.
-            </p>
-          </div>
-
-          <!-- Video as audio -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              Video identity
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Audio files get a video identity on iOS — ambient visualization,
-              Picture-in-Picture multitasking, enhanced lock screen and Dynamic
-              Island presence. The system behaviors iOS reserves for video apps,
-              working for your audio.
-            </p>
-          </div>
-
-          <!-- CarPlay ready -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              CarPlay ready
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light mb-6"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Full CarPlay support for long drives and daily commutes.
-            </p>
-            <!-- CarPlay Mockup -->
-            <div
-              class="w-full h-20 bg-black rounded-lg flex items-center justify-center"
-            >
-              <div class="text-white text-sm">CarPlay Interface</div>
-            </div>
-          </div>
-
-          <!-- Live Activities -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              Live Activities
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light mb-6"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Keep your current listen visible on your Lock Screen and Dynamic
-              Island.
-            </p>
-            <!-- Live Activity Mockup -->
-            <div
-              class="w-full h-16 bg-black rounded-2xl flex items-center justify-between px-4"
-            >
-              <div class="text-white text-xs">Now Playing</div>
-              <div
-                class="w-8 h-8 rounded-full"
-                style="background-color: #97A859;"
-              >
-              </div>
-            </div>
-          </div>
-
-          <!-- Listening projects -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              Listening projects
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Researching a subject? Bring together files from across your
-              library into a single project — lectures, interviews, audiobooks —
-              and work through it over time.
-            </p>
-          </div>
-
-          <!-- Music collections -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                ></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              Music mode
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Collect live shows, concert recordings, bootlegs? Mark files as
-              music and find them in the Music tab with a dedicated player —
-              scrub and skip tracks instead of skip-back-by-seconds. No progress
-              tracking, just listening.
+              Import from your device, Dropbox, or Google Drive. Tam Listen
+              plays your local and cloud-imported files without conversion. If
+              you have it, you can listen to it.
             </p>
           </div>
 
@@ -602,6 +295,244 @@ import AppLayout from "../../layouts/AppLayout.astro";
             </p>
           </div>
 
+          <!-- Listening projects -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              Listening projects
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Researching a subject? Bring together files from across your
+              library into a single project — lectures, interviews, audiobooks —
+              and work through it over time.
+            </p>
+          </div>
+
+          <!-- Music collections -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              Music mode
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Collect live shows, concert recordings, bootlegs? Mark files as
+              music and find them in the Music tab with a dedicated player —
+              scrub and skip tracks instead of skip-back-by-seconds. No progress
+              tracking, just listening.
+            </p>
+          </div>
+
+          <!-- Now Playing everywhere -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              Now Playing everywhere
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Lock Screen, Control Center, and Dynamic Island controls for every
+              listening session.
+            </p>
+          </div>
+
+          <!-- CarPlay ready -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <img
+              src="/carplay-icon.png"
+              alt="Apple CarPlay"
+              class="w-14 h-14 rounded-2xl mb-6"
+              style="box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);"
+            />
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              CarPlay ready
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Full CarPlay support for long drives and daily commutes.
+            </p>
+          </div>
+
+          <!-- Audio + video containers -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              Audio + video containers
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Play common audio formats and video containers in one unified
+              listening experience. MP4 and MOV content where listening is the
+              primary use case — with consistent controls and system integration
+              across all content types.
+            </p>
+          </div>
+
           <!-- Offload & restore -->
           <div
             class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
@@ -680,14 +611,10 @@ import AppLayout from "../../layouts/AppLayout.astro";
             curiosity, commitment.
           </p>
           <p class="text-xl text-gray-300 leading-relaxed mb-8">
-            Most apps want to be the source, the library, the platform. But the
-            files you've collected are more important than any app you use to
-            play them. Apps are ephemeral — your library can last.
-          </p>
-          <p class="text-xl text-gray-300 leading-relaxed mb-8">
             Tam Listen is <a href="/listen/dwelling" class="listen-link"
               >an enjoyment layer</a
-            > for your library
+            > for the files you've already collected — a place to engage with what
+            matters to you, at your own pace.
           </p>
         </div>
       </div>
