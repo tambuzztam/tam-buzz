@@ -7,7 +7,7 @@ export interface Props {
 
 const {
   title,
-  description = "An audio player for power listeners. Own your files. Manage your library. Listen to everything — even video — as audio.",
+  description = "A file-first listening app for people with real media libraries. Play audio and video container files, organize with projects, and listen to everything.",
   ogImage = "/og-image-listen.png",
 } = Astro.props;
 
@@ -97,16 +97,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   section {
     scroll-snap-align: start;
-  }
-
-  /* Shared fixed backdrop layer — uses 100vh as fallback, 100lvh where supported */
-  .bg-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    height: 100lvh;
   }
 
   /* Ensure smooth scrolling works across browsers */

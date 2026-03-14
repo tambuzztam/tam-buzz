@@ -228,7 +228,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
             </p>
           </div>
 
-          <!-- Video as audio -->
+          <!-- Pick up where you left off -->
           <div
             class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
             style="
@@ -259,28 +259,27 @@ import AppLayout from "../../layouts/AppLayout.astro";
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                ></path>
+                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
               </svg>
             </div>
             <h3
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              Audio + video containers
+              Pick up where you left off
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Play common audio formats and video containers in one unified
-              listening experience. MP4 and MOV content where listening is the
-              primary use case — with consistent controls and system integration
-              across all content types.
+              Per-file position memory means you return to exactly where you
+              stopped — even across sessions. Auto-play continues to the next
+              file in a directory. Set a sleep timer when you're done for the
+              night.
             </p>
           </div>
 
-          <!-- CarPlay ready -->
+          <!-- Your pace -->
           <div
             class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
             style="
@@ -311,61 +310,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              CarPlay ready
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light mb-6"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Full CarPlay support for long drives and daily commutes.
-            </p>
-            <!-- CarPlay Mockup -->
-            <div
-              class="w-full h-20 bg-black rounded-lg flex items-center justify-center"
-            >
-              <div class="text-white text-sm">CarPlay Interface</div>
-            </div>
-          </div>
-
-          <!-- Now Playing everywhere -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
                 ></path>
               </svg>
             </div>
@@ -373,26 +318,17 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              Now Playing everywhere
+              Your pace
             </h3>
             <p
-              class="text-gray-200 leading-relaxed font-light mb-6"
+              class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Lock Screen, Control Center, and Dynamic Island controls for
-              every listening session.
+              Variable speed from 0.5× to 2× for lectures and audiobooks.
+              Customizable skip intervals — 5, 10, 15, or 30 seconds. Shuffle
+              and repeat for music. Every control shaped to how you actually
+              listen.
             </p>
-            <!-- Now Playing Mockup -->
-            <div
-              class="w-full h-16 bg-black rounded-2xl flex items-center justify-between px-4"
-            >
-              <div class="text-white text-xs">Now Playing</div>
-              <div
-                class="w-8 h-8 rounded-full"
-                style="background-color: #97A859;"
-              >
-              </div>
-            </div>
           </div>
 
           <!-- Listening projects -->
@@ -498,7 +434,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
             </p>
           </div>
 
-          <!-- Pick up where you left off -->
+          <!-- Now Playing everywhere -->
           <div
             class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
             style="
@@ -529,58 +465,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
-              </svg>
-            </div>
-            <h3
-              class="text-2xl font-bold mb-4 text-white"
-              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
-            >
-              Pick up where you left off
-            </h3>
-            <p
-              class="text-gray-200 leading-relaxed font-light"
-              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
-            >
-              Per-file position memory means you return to exactly where you
-              stopped — even across sessions. Auto-play continues to the next
-              file in a directory. Set a sleep timer when you're done for the
-              night.
-            </p>
-          </div>
-
-          <!-- Your pace -->
-          <div
-            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
-            style="
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(206, 218, 142, 0.15);
-            backdrop-filter: blur(20px);
-            box-shadow: 
-              0 8px 32px rgba(0, 0, 0, 0.2),
-              0 2px 8px rgba(151, 168, 89, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          "
-          >
-            <div
-              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-              style="
-              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
-              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
-            "
-            >
-              <svg
-                class="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                 ></path>
               </svg>
             </div>
@@ -588,16 +473,131 @@ import AppLayout from "../../layouts/AppLayout.astro";
               class="text-2xl font-bold mb-4 text-white"
               style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
             >
-              Your pace
+              Now Playing everywhere
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light mb-6"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Lock Screen, Control Center, and Dynamic Island controls for
+              every listening session.
+            </p>
+            <!-- Now Playing Mockup -->
+            <div
+              class="w-full h-16 bg-black rounded-2xl flex items-center justify-between px-4"
+            >
+              <div class="text-white text-xs">Now Playing</div>
+              <div
+                class="w-8 h-8 rounded-full"
+                style="background-color: #97A859;"
+              >
+              </div>
+            </div>
+          </div>
+
+          <!-- CarPlay ready -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              CarPlay ready
+            </h3>
+            <p
+              class="text-gray-200 leading-relaxed font-light mb-6"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
+            >
+              Full CarPlay support for long drives and daily commutes.
+            </p>
+            <!-- CarPlay Mockup -->
+            <div
+              class="w-full h-20 bg-black rounded-lg flex items-center justify-center"
+            >
+              <div class="text-white text-sm">CarPlay Interface</div>
+            </div>
+          </div>
+
+          <!-- Audio + video containers -->
+          <div
+            class="rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+            style="
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(206, 218, 142, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 
+              0 8px 32px rgba(0, 0, 0, 0.2),
+              0 2px 8px rgba(151, 168, 89, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          "
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+              style="
+              background: linear-gradient(135deg, #97A859 0%, #CEDA8E 100%);
+              box-shadow: 0 8px 25px rgba(151, 168, 89, 0.25);
+            "
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-white"
+              style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);"
+            >
+              Audio + video containers
             </h3>
             <p
               class="text-gray-200 leading-relaxed font-light"
               style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);"
             >
-              Variable speed from 0.5× to 2× for lectures and audiobooks.
-              Customizable skip intervals — 5, 10, 15, or 30 seconds. Shuffle
-              and repeat for music. Every control shaped to how you actually
-              listen.
+              Play common audio formats and video containers in one unified
+              listening experience. MP4 and MOV content where listening is the
+              primary use case — with consistent controls and system integration
+              across all content types.
             </p>
           </div>
 
