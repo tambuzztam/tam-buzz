@@ -1,0 +1,201 @@
+---
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Page Not Found</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: system-ui, sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        color: #e5e7eb;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 32rem;
+        text-align: center;
+      }
+
+      .heading {
+        font-size: clamp(4rem, 10vw, 6rem);
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .message {
+        font-size: 1.25rem;
+        color: #d1d5db;
+        line-height: 1.75;
+        margin-bottom: 2.5rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.125rem;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .back-link svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.5rem;
+      }
+
+      /* Listen variant */
+      body.listen {
+        background: #000;
+      }
+
+      body.listen .bg-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      body.listen .bg-image {
+        position: absolute;
+        inset: 0;
+        background: url("/inverse_coldmountain.jpg") center / cover no-repeat;
+        opacity: 0.5;
+      }
+
+      body.listen .bg-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.94) 0%,
+          rgba(15, 15, 15, 0.95) 40%,
+          rgba(26, 26, 26, 0.96) 70%,
+          rgba(26, 31, 26, 0.97) 100%
+        );
+      }
+
+      body.listen .container {
+        position: relative;
+        z-index: 10;
+      }
+
+      body.listen .heading {
+        background-image: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #ceda8e 40%,
+          #97a859 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      body.listen .back-link {
+        color: #ceda8e;
+      }
+      body.listen .back-link:hover {
+        color: #97a859;
+      }
+
+      /* Default (tam.buzz) variant */
+      body.tam {
+        background: #111827;
+        position: relative;
+      }
+
+      body.tam .bg-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      body.tam .bg-image {
+        position: absolute;
+        inset: 0;
+        background: url("/inverse_coldmountain.jpg") center / cover no-repeat;
+        opacity: 0.5;
+      }
+
+      body.tam .bg-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(17, 24, 39, 0.4),
+          rgba(17, 24, 39, 0.6),
+          rgba(17, 24, 39, 0.7)
+        );
+      }
+
+      body.tam .container {
+        position: relative;
+        z-index: 10;
+      }
+      body.tam .heading {
+        color: #ffffff;
+      }
+      body.tam .back-link {
+        color: #93c5fd;
+      }
+      body.tam .back-link:hover {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-layer">
+      <div class="bg-image"></div>
+      <div class="bg-gradient"></div>
+    </div>
+    <div class="container">
+      <h1 class="heading">404</h1>
+      <p class="message">This page doesn't exist.</p>
+      <a id="back-link" href="/" class="back-link">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span id="back-text"></span>
+      </a>
+    </div>
+    <script>
+      const isListen = window.location.pathname.startsWith("/listen");
+      document.body.classList.add(isListen ? "listen" : "tam");
+      document.title = isListen
+        ? "Page Not Found - Tam Listen"
+        : "Page Not Found - Tam";
+      const link = document.getElementById("back-link");
+      const text = document.getElementById("back-text");
+      link.href = isListen ? "/listen" : "/";
+      text.textContent = isListen ? "Back to Tam Listen" : "Back to tam.buzz";
+    </script>
+  </body>
+</html>
