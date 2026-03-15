@@ -1,0 +1,140 @@
+---
+import AppLayout from "../../../layouts/AppLayout.astro";
+---
+
+<AppLayout
+  title="Terms of Service - Tam Listen"
+  description="Terms of service for Tam Listen."
+>
+  <main class="py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h1
+        class="text-4xl md:text-5xl font-black mb-8"
+        style="
+        background-image: linear-gradient(135deg, #ffffff 0%, #CEDA8E 70%, #97A859 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
+      "
+      >
+        Terms of Service
+      </h1>
+
+      <p class="text-gray-400 mb-12">Effective date: March 14, 2026</p>
+
+      <div class="prose prose-lg prose-invert max-w-none">
+        <p class="text-xl text-gray-300 leading-relaxed mb-8">
+          Tam Listen is built by tambuzztam LLC. By downloading or using Tam
+          Listen, you agree to these terms.
+        </p>
+
+        <h2
+          class="text-2xl font-bold text-white mt-12 mb-4"
+          style="color: #CEDA8E;"
+        >
+          License
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          tambuzztam LLC grants you a personal, non-exclusive, non-transferable
+          license to use Tam Listen on your Apple devices in accordance with
+          these terms and Apple's App Store terms.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Permitted Use
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          You may use Tam Listen for personal, lawful purposes only. You agree
+          not to reverse engineer, modify, or redistribute the app.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Cloud Services
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          Tam Listen connects to Dropbox and Google Drive only at your explicit
+          request. Your use of those services is governed by their respective
+          terms of service. We are not responsible for the availability or
+          behavior of third-party services.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          No Warranty
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          Tam Listen is provided "as is" without warranty of any kind. We make
+          no guarantees about availability, accuracy, or fitness for a
+          particular purpose.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Limitation of Liability
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          To the fullest extent permitted by law, tambuzztam LLC shall not be
+          liable for any indirect, incidental, or consequential damages arising
+          from your use of Tam Listen.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Governing Law
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          These terms are governed by the laws of the State of Delaware.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Changes to These Terms
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          We may update these terms from time to time. Changes will be posted
+          here, and the effective date will reflect when changes were made.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4" style="color: #CEDA8E;">
+          Contact
+        </h2>
+        <p class="text-gray-300 leading-relaxed">
+          Questions? Reach us at <a
+            href="mailto:support@tam.buzz"
+            class="terms-link">support@tam.buzz</a
+          >
+        </p>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-white/10">
+        <a
+          href="/listen"
+          class="terms-link inline-flex items-center transition-colors"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Tam Listen
+        </a>
+      </div>
+    </div>
+  </main>
+</AppLayout>
+
+<style>
+  .terms-link {
+    color: #ceda8e;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .terms-link:hover {
+    color: #97a859;
+  }
+</style>
