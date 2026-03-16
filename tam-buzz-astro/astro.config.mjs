@@ -8,7 +8,9 @@ export default defineConfig({
   site: "https://tam.buzz",
   trailingSlash: "always",
   redirects: {
+    "/depths": "/",
     "/depths/": "/",
+    "/heights": "/",
     "/heights/": "/",
   },
   integrations: [tailwind(), sitemap()],
