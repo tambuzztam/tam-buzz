@@ -19,13 +19,6 @@ export default [
     },
   },
   {
-    // TODO: remove once real App Store link is added
-    files: ["**/pages/listen/index.astro"],
-    rules: {
-      "astro/jsx-a11y/anchor-is-valid": "off",
-    },
-  },
-  {
     ignores: ["dist/", "node_modules/", ".astro/"],
   },
 ];
