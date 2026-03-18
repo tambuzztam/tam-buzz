@@ -15,7 +15,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -96,13 +96,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <style is:global>
   html {
     font-family: system-ui, sans-serif;
-    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
     background-color: #000000;
-  }
-
-  section {
-    scroll-snap-align: start;
   }
 
   /* Ensure smooth scrolling works across browsers */
