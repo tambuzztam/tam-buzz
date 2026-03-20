@@ -21,3 +21,11 @@ import KeyboardNavigation from "../components/KeyboardNavigation.astro";
 
   <KeyboardNavigation />
 </Layout>
+
+<script>
+  if (window.location.hash) {
+    document.documentElement.style.scrollBehavior = "auto";
+    document.querySelector(window.location.hash)?.scrollIntoView();
+    setTimeout(() => (document.documentElement.style.scrollBehavior = ""), 0);
+  }
+</script>
