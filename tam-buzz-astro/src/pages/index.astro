@@ -28,12 +28,7 @@ import KeyboardNavigation from "../components/KeyboardNavigation.astro";
       const targetId = decodeURIComponent(window.location.hash.slice(1));
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        document.documentElement.style.scrollBehavior = "auto";
-        targetElement.scrollIntoView();
-        setTimeout(
-          () => (document.documentElement.style.scrollBehavior = ""),
-          0,
-        );
+        targetElement.scrollIntoView({ behavior: "instant" });
       }
     } catch (e) {
       // Ignore invalid or malformed hash values
