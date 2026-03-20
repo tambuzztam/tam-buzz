@@ -23,9 +23,17 @@ import KeyboardNavigation from "../components/KeyboardNavigation.astro";
 </Layout>
 
 <script>
-  if (window.location.hash) {
-    document.documentElement.style.scrollBehavior = "auto";
-    document.querySelector(window.location.hash)?.scrollIntoView();
-    setTimeout(() => (document.documentElement.style.scrollBehavior = ""), 0);
+  if (window.location.hash && window.location.hash.length > 1) {
+    try {
+      const targetId = decodeURIComponent(window.location.hash.slice(1));
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        document.documentElement.style.scrollBehavior = "auto";
+        targetElement.scrollIntoView();
+        setTimeout(() => (document.documentElement.style.scrollBehavior = ""), 0);
+      }
+    } catch (e) {
+      // Ignore invalid or malformed hash values
+    }
   }
 </script>

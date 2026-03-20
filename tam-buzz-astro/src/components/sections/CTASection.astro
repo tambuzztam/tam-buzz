@@ -1,5 +1,6 @@
 ---
 import CTAButton from "../ui/CTAButton.astro";
+const year = new Date().getFullYear();
 ---
 
 <!-- CTA Section -->
@@ -38,7 +39,7 @@ import CTAButton from "../ui/CTAButton.astro";
       <span class="hidden sm:inline">·</span>
       <a href="/terms/" class="footer-link">Terms of Service</a>
       <span class="hidden sm:inline">·</span>
-      <span>© 2026 tambuzztam LLC</span>
+      <span>© {year} tambuzztam LLC</span>
     </div>
   </footer>
 </section>
