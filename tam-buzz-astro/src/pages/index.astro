@@ -30,7 +30,10 @@ import KeyboardNavigation from "../components/KeyboardNavigation.astro";
       if (targetElement) {
         document.documentElement.style.scrollBehavior = "auto";
         targetElement.scrollIntoView();
-        setTimeout(() => (document.documentElement.style.scrollBehavior = ""), 0);
+        setTimeout(
+          () => (document.documentElement.style.scrollBehavior = ""),
+          0,
+        );
       }
     } catch (e) {
       // Ignore invalid or malformed hash values
