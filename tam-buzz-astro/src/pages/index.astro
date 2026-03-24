@@ -21,17 +21,3 @@ import KeyboardNavigation from "../components/KeyboardNavigation.astro";
 
   <KeyboardNavigation />
 </Layout>
-
-<script>
-  if (window.location.hash && window.location.hash.length > 1) {
-    try {
-      const targetId = decodeURIComponent(window.location.hash.slice(1));
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "instant" });
-      }
-    } catch (e) {
-      // Ignore invalid or malformed hash values
-    }
-  }
-</script>
