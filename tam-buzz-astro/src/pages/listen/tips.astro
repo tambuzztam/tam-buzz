@@ -55,10 +55,12 @@ import AppLayout from "../../layouts/AppLayout.astro";
             that will make the whole experience feel smoother and faster.
           </p>
 
+          <h2>Setup</h2>
+
           <!-- Tip 1 -->
           <div class="tip-card">
             <div class="tip-number">1</div>
-            <h2>Bring your cloud storage into the file picker</h2>
+            <h3>Bring your cloud storage into the file picker</h3>
 
             <p>
               When you import files in Tam Listen, the file picker shows you a
@@ -101,7 +103,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
           <!-- Tip 2 -->
           <div class="tip-card">
             <div class="tip-number">2</div>
-            <h2>Share into Tam Listen from any app</h2>
+            <h3>Share into Tam Listen from any app</h3>
 
             <p>
               You don't always have to import files by browsing for them. If
@@ -141,7 +143,7 @@ import AppLayout from "../../layouts/AppLayout.astro";
           <!-- Tip 3 -->
           <div class="tip-card">
             <div class="tip-number">3</div>
-            <h2>Pin Tam Listen to the front of your share sheet</h2>
+            <h3>Pin Tam Listen to the front of your share sheet</h3>
 
             <p>
               Once you start using the share extension, you'll want Tam Listen
@@ -184,33 +186,10 @@ import AppLayout from "../../layouts/AppLayout.astro";
             </p>
           </div>
 
-          <!-- Tip 4 -->
-          <div class="tip-card">
-            <div class="tip-number">4</div>
-            <h2>Long press for more options</h2>
+          <h2>If you plan to listen to music</h2>
 
-            <p>
-              Touch and hold any file, directory, or project to open a quick
-              menu — rename, remove, mark as completed, and more — without
-              digging through settings.
-            </p>
-          </div>
-
-          <!-- Tip 5 -->
-          <div class="tip-card">
-            <div class="tip-number">5</div>
-            <h2>Drag to reorder</h2>
-
-            <p>
-              Touch and hold, then drag to reorder your files, directories,
-              projects, and playlists. Your custom order is saved automatically.
-            </p>
-          </div>
-
-          <!-- Tip 6 -->
-          <div class="tip-card">
-            <div class="tip-number">6</div>
-            <h2>Turn on the dedicated music player</h2>
+          <div class="tip-card tip-card--single">
+            <h3>Turn on the dedicated music player</h3>
 
             <p>
               Turn on Music Mode in Settings to get a separate tab and player
@@ -218,6 +197,28 @@ import AppLayout from "../../layouts/AppLayout.astro";
               skip-back-by-seconds. Use the long press menu to mark any import
               as music.
             </p>
+          </div>
+
+          <h2>Shortcuts</h2>
+
+          <div class="hint-list">
+            <div class="hint-item">
+              <h3>Long press for more options</h3>
+              <p>
+                Touch and hold any file, directory, or project to open a quick
+                menu — rename, remove, mark as completed, and more — without
+                digging through settings.
+              </p>
+            </div>
+
+            <div class="hint-item">
+              <h3>Drag to reorder</h3>
+              <p>
+                Touch and hold, then drag to reorder your files, directories,
+                projects, and playlists. Your custom order is saved
+                automatically.
+              </p>
+            </div>
           </div>
 
           <hr />
@@ -284,7 +285,8 @@ import AppLayout from "../../layouts/AppLayout.astro";
   .tips-prose h2 {
     font-size: 1.875rem;
     font-weight: 800;
-    margin-bottom: 1.25rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
     background-image: linear-gradient(
       135deg,
@@ -295,6 +297,18 @@ import AppLayout from "../../layouts/AppLayout.astro";
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .tips-prose h2:first-of-type {
+    margin-top: 0;
+  }
+
+  .tips-prose h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
   }
 
   .tips-prose p {
@@ -392,6 +406,34 @@ import AppLayout from "../../layouts/AppLayout.astro";
 
   .tip-steps li::marker {
     color: #97a859;
+  }
+
+  .tip-card--single {
+    margin-bottom: 3.5rem;
+    padding-top: 2rem;
+  }
+
+  .hint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .hint-item {
+    padding: 1.5rem 1.75rem;
+    border-radius: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(206, 218, 142, 0.08);
+  }
+
+  .hint-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hint-item p {
+    margin-bottom: 0;
   }
 
   .tips-link {
